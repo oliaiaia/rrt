@@ -60,7 +60,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/olia/Skoltech/Planning/PS2-sampling/rrt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/olia/Skoltech/Planning/PS2-sampling/build
+CMAKE_BINARY_DIR = /home/olia/Skoltech/Planning/PS2-sampling/rrt/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/olia/Skoltech/Planning/PS2-sampling/build/CMakeFiles /home/olia/Skoltech/Planning/PS2-sampling/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/olia/Skoltech/Planning/PS2-sampling/rrt/build/CMakeFiles /home/olia/Skoltech/Planning/PS2-sampling/rrt/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/olia/Skoltech/Planning/PS2-sampling/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/olia/Skoltech/Planning/PS2-sampling/rrt/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/olia/Skoltech/Planning/PS2-sampling/build",
+  "command": "/usr/bin/c++  -I/home/olia/Skoltech/Planning/PS2-sampling/rrt/include -isystem /usr/include/eigen3 -g -o CMakeFiles/rtt_planning.dir/src/Tree.cpp.o -c /home/olia/Skoltech/Planning/PS2-sampling/rrt/src/Tree.cpp",
+  "file": "/home/olia/Skoltech/Planning/PS2-sampling/rrt/src/Tree.cpp",
+  "output": "CMakeFiles/rtt_planning.dir/src/Tree.cpp.o"
+},
+{
+  "directory": "/home/olia/Skoltech/Planning/PS2-sampling/build",
+  "command": "/usr/bin/c++  -I/home/olia/Skoltech/Planning/PS2-sampling/rrt/include -isystem /usr/include/eigen3 -g -o CMakeFiles/rtt_planning.dir/src/RRT.cpp.o -c /home/olia/Skoltech/Planning/PS2-sampling/rrt/src/RRT.cpp",
+  "file": "/home/olia/Skoltech/Planning/PS2-sampling/rrt/src/RRT.cpp",
+  "output": "CMakeFiles/rtt_planning.dir/src/RRT.cpp.o"
+},
+{
+  "directory": "/home/olia/Skoltech/Planning/PS2-sampling/build",
+  "command": "/usr/bin/c++  -I/home/olia/Skoltech/Planning/PS2-sampling/rrt/include -isystem /usr/include/eigen3 -g -o CMakeFiles/rtt_planning.dir/src/test.cpp.o -c /home/olia/Skoltech/Planning/PS2-sampling/rrt/src/test.cpp",
+  "file": "/home/olia/Skoltech/Planning/PS2-sampling/rrt/src/test.cpp",
+  "output": "CMakeFiles/rtt_planning.dir/src/test.cpp.o"
+}
+]
