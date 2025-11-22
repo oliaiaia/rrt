@@ -1,101 +1,141 @@
 #include "RRT.hpp"
 
-    double normalizeAngle(double angleDegree) {
-        while(angleDegree > 180) {
-            angleDegree -= 360;
+static double normalizeAngle(double a)
+{
+    a = fmod(a + 180.0, 360.0);
+    if (a < 0)
+        a += 360.0;
+    return a - 180.0;
+}
+
+State RRT::sample()
+{
+    static std::random_device rd;
+    static std::mt19937 gen(rd());
+    std::uniform_real_distribution<double> dist(-180.0, 180.0);
+
+    std::vector<double> angles{dist(gen), dist(gen), dist(gen), dist(gen)};
+    return State(angles);
+}
+
+bool RRT::launch(State stateSTART, State stateGOAL)
+{
+    Tree *newTree = new Tree(stateSTART);
+    tree = *newTree;
+    delete newTree;
+
+    int iter = 0;
+
+    while (true)
+    {
+        iter++;
+
+        State q_rand = sample();
+        std::shared_ptr<Node> q_near = tree.findNearest(q_rand);
+        State q_new = steer(q_rand, q_near->value);
+
+        std::shared_ptr<Node> q_new_node = nullptr;
+
+        if (checkStatesBtw(q_new, q_near->value))
+        {
+            q_new_node = tree.addNode(q_near, q_new);
         }
-        while(angleDegree < -180) {
-            angleDegree += 360;
+
+        if (q_new_node && checkGoalTreashold(q_new, stateGOAL))
+        {
+            nodeGOAL = tree.addNode(q_new_node, stateGOAL);
+            return true;
         }
-        return angleDegree;
+
+        if (iter > 20000)
+            return false;
     }
-    State RRT::sample() {
+}
 
-        std::random_device rd;
-        std::mt19937 gen(rd());
-        double min = -180.0;
-        double max = 180.0;
-        std::uniform_real_distribution<double> dist(min, max);
-        std::vector<double> angles {dist(gen), dist(gen), dist(gen), dist(gen)};
+State RRT::steer(const State &q_rand, const State &q_near)
+{
+    std::vector<double> angles(4);
 
-        return State(angles);
-    
+    double localStep = step;
+
+    bool needReduce = false;
+
+    for (int i = 0; i < q_near.joints; i++)
+    {
+        double delta = normalizeAngle(q_rand.angleVector(i) - q_near.angleVector(i));
+        double a = q_near.angleVector(i) + delta * localStep;
+
+        if (std::fabs(a) > treashold)
+        {
+            needReduce = true;
+        }
     }
 
-    bool RRT::launch(State stateSTART, State stateGOAL){
-        Tree *newTree = new Tree(stateSTART);
-        tree = *newTree; 
-        delete newTree;
+    if (needReduce)
+    {
+        while (true)
+        {
+            localStep /= 2.0;
 
-        while(true) {
-
-            State stateRANDOM = sample();
-            std::shared_ptr<Node> nodeNEAR = tree.findNearest(stateRANDOM);
-            State stateNEW = steer(stateRANDOM, nodeNEAR->value);
-            
-            std::shared_ptr<Node> nodeNEW;
-
-            if(checkStatesBtw(stateNEW, nodeNEAR->value)) {
-                nodeNEW = tree.addNode(nodeNEAR, stateNEW);
-            }
-
-            if(checkGoalTreashold(stateNEW, stateGOAL))
+            bool ok = true;
+            for (int i = 0; i < q_near.joints; i++)
             {
-                nodeGOAL = tree.addNode(nodeNEW, stateGOAL);
-                return true;
+                double delta = normalizeAngle(q_rand.angleVector(i) - q_near.angleVector(i));
+                double a = q_near.angleVector(i) + delta * localStep;
+
+                if (std::fabs(a) > treashold)
+                    ok = false;
             }
+
+            if (ok)
+                break;
+            if (localStep < 1e-6)
+                break;
         }
     }
 
-
-    State RRT::steer(State stateRANDOM, State stateNEAR){
-            std::vector<double> angles(4);
-            for (size_t i = 0; i < stateNEAR.joints; i++)
-            {
-                /* code */
-                double angle = stateNEAR.angleVector(i) + normalizeAngle(stateRANDOM.angleVector(i) - stateNEAR.angleVector(i)) * step;
-                bool changeStep = false;
-
-                while(angle > treashold) {
-                    step /= 2; 
-                    angle = stateNEAR.angleVector(i) + normalizeAngle(stateRANDOM.angleVector(i) - stateNEAR.angleVector(i)) * step;
-                    changeStep = true;
-                }
-
-                angles[i] = angle;
-                if(changeStep && i != 0) i = -1; // restart for all joints
-            }
-
-            step = 0.5;
-            return State(angles);
+    for (int i = 0; i < q_near.joints; i++)
+    {
+        double delta = normalizeAngle(q_rand.angleVector(i) - q_near.angleVector(i));
+        angles[i] = q_near.angleVector(i) + delta * localStep;
     }
 
-    void RRT::generateStatesBtw(State stateNEW, State stateNEAR, std::vector<State> &statesVector){
-        for(size_t t = 0; t <= stepBtw; t++) {
-            std::vector<double> angles(4);
-            for (size_t i = 0; i < stateNEW.joints; i++)
-            {
-                /* code */
-                double angle = stateNEAR.angleVector(i) + t * normalizeAngle(stateNEW.angleVector(i) - stateNEAR.angleVector(i)) / stepBtw;
-                angles[i] = angle;
-            }
-            State stateBTW = State(angles);
-            statesVector.push_back(stateBTW);
+    return State(angles);
+}
+
+void RRT::generateStatesBtw(const State &q_new, const State &q_near, std::vector<State> &out)
+{
+    out.reserve(stepBtw + 1);
+
+    for (size_t t = 0; t <= stepBtw; t++)
+    {
+        std::vector<double> angles(4);
+        double alpha = double(t) / double(stepBtw);
+
+        for (int i = 0; i < q_new.joints; i++)
+        {
+            double delta = normalizeAngle(q_new.angleVector(i) - q_near.angleVector(i));
+            angles[i] = q_near.angleVector(i) + delta * alpha;
         }
+
+        out.emplace_back(angles);
     }
+}
 
-    bool RRT::checkStatesBtw(State stateNEW, State stateNEAR){
-        std::vector<State> statesVector;
-        generateStatesBtw(stateNEW, stateNEAR, statesVector);
-        for(const auto& state: statesVector) {
-            if(env.checkCollision(state, 0.05)) return false;
-        }
-        return true;
+bool RRT::checkStatesBtw(const State &q_new, const State &q_near)
+{
+    std::vector<State> vec;
+    generateStatesBtw(q_new, q_near, vec);
+
+    for (const auto &s : vec)
+    {
+        if (env.checkCollision(s, 0.05))
+            return false;
     }
+    return true;
+}
 
-    bool RRT::checkGoalTreashold(State stateNEW, State stateGOAL){
-        if(tree.distanceFunction(stateNEW, stateGOAL) <= treashold) return true;
-        return false;
-    }
-
-
+bool RRT::checkGoalTreashold(const State &q_new, const State &q_goal)
+{
+    return tree.distanceFunction(q_new, q_goal) <= treashold;
+}
