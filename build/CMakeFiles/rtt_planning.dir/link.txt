@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/rtt_planning.dir/src/Tree.cpp.o CMakeFiles/rtt_planning.dir/src/RRT.cpp.o CMakeFiles/rtt_planning.dir/src/test.cpp.o -o rtt_planning 
+/usr/bin/c++  -O3 -march=native -DNDEBUG -g CMakeFiles/rtt_planning.dir/src/Tree.cpp.o CMakeFiles/rtt_planning.dir/src/RRT.cpp.o CMakeFiles/rtt_planning.dir/src/test.cpp.o -o rtt_planning 

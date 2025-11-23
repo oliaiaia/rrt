@@ -6,5 +6,5 @@ CXX_DEFINES = -Drtt_planning_lib_EXPORTS
 
 CXX_INCLUDES = -I/home/olia/Skoltech/Planning/PS2-sampling/rrt/include -isystem /usr/include/python3.12 -isystem /usr/include/eigen3
 
-CXX_FLAGS = -g -fPIC -fvisibility=hidden
+CXX_FLAGS =  -O3 -march=native -DNDEBUG -g -std=c++17 -fPIC -fvisibility=hidden -O3 -march=native -DNDEBUG
 

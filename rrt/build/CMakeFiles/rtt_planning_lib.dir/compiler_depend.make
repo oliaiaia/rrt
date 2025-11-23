@@ -253,6 +253,10 @@ CMakeFiles/rtt_planning_lib.dir/src/RRT.cpp.o: /home/olia/Skoltech/Planning/PS2-
   /usr/include/eigen3/Eigen/src/Core/VectorBlock.h \
   /usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h \
   /usr/include/eigen3/Eigen/src/Core/Visitor.h \
+  /usr/include/eigen3/Eigen/src/Core/arch/AVX/Complex.h \
+  /usr/include/eigen3/Eigen/src/Core/arch/AVX/MathFunctions.h \
+  /usr/include/eigen3/Eigen/src/Core/arch/AVX/PacketMath.h \
+  /usr/include/eigen3/Eigen/src/Core/arch/AVX/TypeCasting.h \
   /usr/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h \
   /usr/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h \
   /usr/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
@@ -402,13 +406,22 @@ CMakeFiles/rtt_planning_lib.dir/src/RRT.cpp.o: /home/olia/Skoltech/Planning/PS2-
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/select-decl.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
@@ -447,6 +460,8 @@ CMakeFiles/rtt_planning_lib.dir/src/RRT.cpp.o: /home/olia/Skoltech/Planning/PS2-
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
@@ -468,15 +483,106 @@ CMakeFiles/rtt_planning_lib.dir/src/RRT.cpp.o: /home/olia/Skoltech/Planning/PS2-
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/adxintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/amxbf16intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/amxcomplexintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/amxfp16intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/amxint8intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/amxtileintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx2intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx5124fmapsintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx5124vnniwintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bf16intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bf16vlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bitalgintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bwintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512cdintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512dqintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512erintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512fintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512fp16intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512fp16vlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512ifmaintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512ifmavlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512pfintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmi2intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmi2vlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmiintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmivlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vlbwintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vldqintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vnniintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vnnivlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vp2intersectintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vp2intersectvlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vpopcntdqintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vpopcntdqvlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avxifmaintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avxintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avxneconvertintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avxvnniint8intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avxvnniintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/bmi2intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/bmiintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/cetintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/cldemoteintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/clflushoptintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/clwbintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/clzerointrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/cmpccxaddintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/enqcmdintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/f16cintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/fmaintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/fxsrintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/gfniintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/hresetintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/ia32intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/immintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/keylockerintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/lwpintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/lzcntintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/mm_malloc.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/movdirintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/mwaitintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/mwaitxintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/nmmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/pconfigintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/pkuintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/pmmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/popcntintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/prfchiintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/prfchwintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/raointintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/rdseedintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/rtmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/serializeintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/sgxintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/shaintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/smmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/xmmintrin.h
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/tbmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/tmmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/tsxldtrkintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/uintrintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/vaesintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/vpclmulqdqintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/waitpkgintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/wbnoinvdintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/wmmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/x86gprintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/xsavecintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/xsaveintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/xsaveoptintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/xsavesintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/xtestintrin.h
 
 CMakeFiles/rtt_planning_lib.dir/src/Tree.cpp.o: /home/olia/Skoltech/Planning/PS2-sampling/rrt/src/Tree.cpp \
   /home/olia/Skoltech/Planning/PS2-sampling/rrt/include/Environment.hpp \
@@ -723,6 +829,10 @@ CMakeFiles/rtt_planning_lib.dir/src/Tree.cpp.o: /home/olia/Skoltech/Planning/PS2
   /usr/include/eigen3/Eigen/src/Core/VectorBlock.h \
   /usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h \
   /usr/include/eigen3/Eigen/src/Core/Visitor.h \
+  /usr/include/eigen3/Eigen/src/Core/arch/AVX/Complex.h \
+  /usr/include/eigen3/Eigen/src/Core/arch/AVX/MathFunctions.h \
+  /usr/include/eigen3/Eigen/src/Core/arch/AVX/PacketMath.h \
+  /usr/include/eigen3/Eigen/src/Core/arch/AVX/TypeCasting.h \
   /usr/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h \
   /usr/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h \
   /usr/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
@@ -872,13 +982,22 @@ CMakeFiles/rtt_planning_lib.dir/src/Tree.cpp.o: /home/olia/Skoltech/Planning/PS2
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/select-decl.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
@@ -917,6 +1036,8 @@ CMakeFiles/rtt_planning_lib.dir/src/Tree.cpp.o: /home/olia/Skoltech/Planning/PS2
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
@@ -937,15 +1058,106 @@ CMakeFiles/rtt_planning_lib.dir/src/Tree.cpp.o: /home/olia/Skoltech/Planning/PS2
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/adxintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/amxbf16intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/amxcomplexintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/amxfp16intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/amxint8intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/amxtileintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx2intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx5124fmapsintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx5124vnniwintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bf16intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bf16vlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bitalgintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bwintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512cdintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512dqintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512erintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512fintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512fp16intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512fp16vlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512ifmaintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512ifmavlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512pfintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmi2intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmi2vlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmiintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmivlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vlbwintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vldqintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vnniintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vnnivlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vp2intersectintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vp2intersectvlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vpopcntdqintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vpopcntdqvlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avxifmaintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avxintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avxneconvertintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avxvnniint8intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avxvnniintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/bmi2intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/bmiintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/cetintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/cldemoteintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/clflushoptintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/clwbintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/clzerointrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/cmpccxaddintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/enqcmdintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/f16cintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/fmaintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/fxsrintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/gfniintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/hresetintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/ia32intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/immintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/keylockerintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/lwpintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/lzcntintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/mm_malloc.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/movdirintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/mwaitintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/mwaitxintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/nmmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/pconfigintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/pkuintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/pmmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/popcntintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/prfchiintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/prfchwintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/raointintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/rdseedintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/rtmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/serializeintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/sgxintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/shaintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/smmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/xmmintrin.h
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/tbmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/tmmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/tsxldtrkintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/uintrintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/vaesintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/vpclmulqdqintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/waitpkgintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/wbnoinvdintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/wmmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/x86gprintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/xsavecintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/xsaveintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/xsaveoptintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/xsavesintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/xtestintrin.h
 
 CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning/PS2-sampling/rrt/src/bindings.cpp \
   /home/olia/Skoltech/Planning/PS2-sampling/rrt/include/Environment.hpp \
@@ -1240,6 +1452,10 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
   /usr/include/eigen3/Eigen/src/Core/VectorBlock.h \
   /usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h \
   /usr/include/eigen3/Eigen/src/Core/Visitor.h \
+  /usr/include/eigen3/Eigen/src/Core/arch/AVX/Complex.h \
+  /usr/include/eigen3/Eigen/src/Core/arch/AVX/MathFunctions.h \
+  /usr/include/eigen3/Eigen/src/Core/arch/AVX/PacketMath.h \
+  /usr/include/eigen3/Eigen/src/Core/arch/AVX/TypeCasting.h \
   /usr/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h \
   /usr/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h \
   /usr/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
@@ -1566,7 +1782,9 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
   /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/select-decl.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/bits/stat.h \
   /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
@@ -1574,8 +1792,15 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
+  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
@@ -1614,10 +1839,14 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd-decl.h \
+  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
@@ -1643,15 +1872,106 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
   /usr/include/x86_64-linux-gnu/sys/stat.h \
   /usr/include/x86_64-linux-gnu/sys/time.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/adxintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/amxbf16intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/amxcomplexintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/amxfp16intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/amxint8intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/amxtileintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx2intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx5124fmapsintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx5124vnniwintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bf16intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bf16vlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bitalgintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bwintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512cdintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512dqintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512erintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512fintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512fp16intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512fp16vlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512ifmaintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512ifmavlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512pfintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmi2intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmi2vlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmiintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmivlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vlbwintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vldqintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vnniintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vnnivlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vp2intersectintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vp2intersectvlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vpopcntdqintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vpopcntdqvlintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avxifmaintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avxintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avxneconvertintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avxvnniint8intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/avxvnniintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/bmi2intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/bmiintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/cetintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/cldemoteintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/clflushoptintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/clwbintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/clzerointrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/cmpccxaddintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/enqcmdintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/f16cintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/fmaintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/fxsrintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/gfniintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/hresetintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/ia32intrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/immintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/keylockerintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/lwpintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/lzcntintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/mm_malloc.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/movdirintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/mwaitintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/mwaitxintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/nmmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/pconfigintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/pkuintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/pmmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/popcntintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/prfchiintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/prfchwintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/raointintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/rdseedintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/rtmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/serializeintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/sgxintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/shaintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/smmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/xmmintrin.h
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/tbmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/tmmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/tsxldtrkintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/uintrintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/vaesintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/vpclmulqdqintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/waitpkgintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/wbnoinvdintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/wmmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/x86gprintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/xsavecintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/xsaveintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/xsaveoptintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/xsavesintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/xtestintrin.h
 
 
 /usr/include/x86_64-linux-gnu/sys/time.h:
@@ -1659,6 +1979,10 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 /usr/include/x86_64-linux-gnu/c++/13/bits/cxxabi_tweaks.h:
 
 /usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
+
+/usr/include/x86_64-linux-gnu/bits/unistd.h:
+
+/usr/include/x86_64-linux-gnu/bits/unistd-decl.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h:
 
@@ -1744,10 +2068,6 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/python3.12/cpython/odictobject.h:
 
-/usr/include/python3.12/tracemalloc.h:
-
-/usr/include/python3.12/cpython/objimpl.h:
-
 /usr/include/python3.12/cpython/modsupport.h:
 
 /usr/include/python3.12/cpython/methodobject.h:
@@ -1822,11 +2142,7 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/pybind11/cast.h:
 
-/usr/include/pybind11/buffer_info.h:
-
 /usr/include/pybind11/attr.h:
-
-/usr/include/linux/types.h:
 
 /usr/include/pybind11/detail/internals.h:
 
@@ -1848,15 +2164,169 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/eigen3/Eigen/src/SparseCore/SparseVector.h:
 
-/usr/include/eigen3/Eigen/src/SparseCore/SparseUtil.h:
-
 /usr/include/eigen3/Eigen/src/SparseCore/SparseTriangularView.h:
 
 /usr/include/eigen3/Eigen/src/SparseCore/SparseTranspose.h:
 
 /usr/include/eigen3/Eigen/src/SparseCore/SparseSparseProductWithPruning.h:
 
-/usr/include/c++/13/bits/stl_deque.h:
+/usr/include/eigen3/Eigen/src/SparseCore/SparseSolverBase.h:
+
+/usr/include/python3.12/fileobject.h:
+
+/usr/include/python3.12/enumobject.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparseRef.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparseProduct.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparseMatrix.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparseDot.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparseDenseProduct.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparseCwiseUnaryOp.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparseAssign.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/MappedSparseMatrix.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/CompressedStorage.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/AmbiVector.h:
+
+/usr/include/c++/13/version:
+
+/usr/include/c++/13/set:
+
+/usr/include/c++/13/optional:
+
+/usr/include/python3.12/compile.h:
+
+/usr/include/c++/13/map:
+
+/usr/include/c++/13/list:
+
+/usr/include/c++/13/iterator:
+
+/usr/include/c++/13/forward_list:
+
+/usr/include/c++/13/cxxabi.h:
+
+/usr/include/c++/13/bits/valarray_before.h:
+
+/usr/include/c++/13/bits/valarray_array.tcc:
+
+/usr/include/c++/13/bits/valarray_array.h:
+
+/usr/include/c++/13/bits/valarray_after.h:
+
+/usr/include/c++/13/bits/stream_iterator.h:
+
+/usr/include/c++/13/bits/stl_tree.h:
+
+/usr/include/c++/13/bits/stl_set.h:
+
+/usr/include/c++/13/bits/stl_relops.h:
+
+/usr/include/c++/13/bits/stl_multiset.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_statx.h:
+
+/usr/include/c++/13/bits/stl_multimap.h:
+
+/usr/include/c++/13/bits/parse_numbers.h:
+
+/usr/include/c++/13/bits/mask_array.h:
+
+/usr/include/c++/13/bits/indirect_array.h:
+
+/usr/include/c++/13/bits/gslice.h:
+
+/usr/include/c++/13/bits/forward_list.tcc:
+
+/usr/include/c++/13/bits/forward_list.h:
+
+/usr/include/asm-generic/posix_types.h:
+
+/usr/include/python3.12/cpython/pyfpe.h:
+
+/usr/include/asm-generic/int-ll64.h:
+
+/home/olia/Skoltech/Planning/PS2-sampling/rrt/src/Tree.cpp:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/xsaveoptintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/xsaveintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/xmmintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/x86gprintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/wmmintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/wbnoinvdintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/vpclmulqdqintrin.h:
+
+/usr/include/python3.12/tracemalloc.h:
+
+/usr/include/python3.12/cpython/objimpl.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/vaesintrin.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparseMatrixBase.h:
+
+/usr/include/c++/13/utility:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/uintrintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/tsxldtrkintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/tmmintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/smmintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/shaintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/serializeintrin.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/raointintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/prfchwintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/prfchiintrin.h:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
+
+/usr/include/c++/13/bits/stl_map.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/popcntintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/pconfigintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/nmmintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/mwaitxintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/movdirintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/lwpintrin.h:
+
+/usr/include/eigen3/Eigen/SparseCore:
+
+/usr/include/c++/13/unordered_set:
+
+/usr/include/eigen3/Eigen/src/Core/arch/AVX/MathFunctions.h:
 
 /usr/include/python3.12/cpython/code.h:
 
@@ -1868,8 +2338,6 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/eigen3/Eigen/src/Core/arch/SSE/MathFunctions.h:
 
-/usr/include/eigen3/Eigen/src/Core/VectorBlock.h:
-
 /usr/include/c++/13/bits/istream.tcc:
 
 /usr/include/eigen3/Eigen/src/Core/TriangularMatrix.h:
@@ -1880,7 +2348,7 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/eigen3/Eigen/src/Core/Reverse.h:
 
-/usr/include/eigen3/Eigen/src/Core/Redux.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/pmmintrin.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
@@ -1888,15 +2356,19 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/eigen3/Eigen/src/Core/ProductEvaluators.h:
 
-/usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h:
-
 /usr/include/pybind11/eigen/matrix.h:
 
 /usr/include/eigen3/Eigen/src/Core/Product.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
-/usr/include/c++/13/bits/shared_ptr_base.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/enqcmdintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/fxsrintrin.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparseSelfAdjointView.h:
+
+/usr/include/eigen3/Eigen/src/Core/NumTraits.h:
 
 /usr/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h:
 
@@ -1908,9 +2380,7 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/eigen3/Eigen/src/Core/BooleanRedux.h:
 
-/usr/include/python3.12/cpython/pyfpe.h:
-
-/usr/include/asm-generic/int-ll64.h:
+/usr/include/eigen3/Eigen/src/Core/arch/AVX/TypeCasting.h:
 
 /usr/include/eigen3/Eigen/src/Core/Map.h:
 
@@ -1918,9 +2388,15 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/eigen3/Eigen/src/Core/DiagonalMatrix.h:
 
+/usr/include/eigen3/Eigen/src/SparseCore/SparseDiagonalProduct.h:
+
+/usr/include/eigen3/Eigen/src/Core/Diagonal.h:
+
 /usr/include/python3.12/pylifecycle.h:
 
 /usr/include/eigen3/Eigen/src/Core/DenseStorage.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512dqintrin.h:
 
 /usr/include/c++/13/functional:
 
@@ -1938,9 +2414,9 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h:
 
-/usr/include/eigen3/Eigen/src/Core/CoreIterators.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/cmpccxaddintrin.h:
 
-/usr/include/c++/13/forward_list:
+/usr/include/eigen3/Eigen/src/Core/CoreIterators.h:
 
 /usr/include/eigen3/Eigen/src/Core/CommaInitializer.h:
 
@@ -1966,6 +2442,10 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/c++/13/bits/stl_pair.h:
 
+/usr/include/c++/13/valarray:
+
+/usr/include/x86_64-linux-gnu/bits/errno.h:
+
 /usr/include/eigen3/Eigen/Householder:
 
 /usr/include/assert.h:
@@ -1973,8 +2453,6 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 /usr/include/eigen3/Eigen/src/QR/FullPivHouseholderQR.h:
 
 /usr/include/eigen3/Eigen/src/Core/ReturnByValue.h:
-
-/usr/include/eigen3/Eigen/Cholesky:
 
 /usr/include/ctype.h:
 
@@ -2004,11 +2482,13 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h:
 
-/usr/include/eigen3/Eigen/src/Core/util/MKL_support.h:
+/usr/include/asm-generic/types.h:
 
-/usr/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h:
+/usr/include/c++/13/tr1/legendre_function.tcc:
 
-/usr/include/eigen3/Eigen/src/Core/IndexedView.h:
+/usr/include/c++/13/math.h:
+
+/usr/include/c++/13/tr1/exp_integral.tcc:
 
 /usr/include/c++/13/bits/locale_classes.h:
 
@@ -2022,23 +2502,13 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
-/usr/include/python3.12/compile.h:
-
-/usr/include/c++/13/map:
-
-/usr/include/c++/13/stdlib.h:
+/usr/include/eigen3/Eigen/src/Core/arch/AVX/Complex.h:
 
 /usr/include/c++/13/pstl/pstl_config.h:
 
 /usr/include/eigen3/Eigen/Jacobi:
 
-/usr/include/c++/13/bits/mask_array.h:
-
 /usr/include/c++/13/random:
-
-/usr/include/eigen3/Eigen/src/Core/Block.h:
-
-/usr/include/c++/13/bits/random.tcc:
 
 /usr/include/c++/13/pstl/glue_numeric_defs.h:
 
@@ -2056,8 +2526,6 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
-/usr/include/eigen3/Eigen/src/SparseCore/SparseMatrix.h:
-
 /usr/include/python3.12/patchlevel.h:
 
 /usr/include/c++/13/istream:
@@ -2068,13 +2536,13 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/eigen3/Eigen/src/Geometry/AlignedBox.h:
 
-/usr/include/c++/13/unordered_set:
-
-/usr/include/eigen3/Eigen/SparseCore:
-
 /usr/include/eigen3/Eigen/src/Core/GeneralProduct.h:
 
-/usr/include/c++/13/initializer_list:
+/usr/include/python3.12/pymem.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/mmintrin.h:
+
+/usr/include/c++/13/tr1/bessel_function.tcc:
 
 /usr/include/eigen3/Eigen/src/QR/CompleteOrthogonalDecomposition.h:
 
@@ -2084,15 +2552,17 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/c++/13/bits/node_handle.h:
 
-/usr/include/c++/13/bits/memoryfwd.h:
-
 /usr/include/eigen3/Eigen/src/Core/ArithmeticSequence.h:
 
 /usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h:
 
-/usr/include/c++/13/streambuf:
+/usr/include/c++/13/bits/slice_array.h:
 
-/usr/include/c++/13/bits/valarray_after.h:
+/usr/include/eigen3/Eigen/src/Core/arch/AVX/PacketMath.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/xsavecintrin.h:
+
+/usr/include/c++/13/streambuf:
 
 /usr/include/eigen3/Eigen/src/Core/GenericPacketMath.h:
 
@@ -2102,15 +2572,19 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/c++/13/bits/uniform_int_dist.h:
 
-/usr/include/c++/13/bits/ios_base.h:
+/usr/include/asm-generic/bitsperlong.h:
 
-/usr/include/c++/13/iterator:
+/usr/include/eigen3/Eigen/src/Geometry/Homogeneous.h:
+
+/usr/include/c++/13/bits/ios_base.h:
 
 /usr/include/python3.12/objimpl.h:
 
 /usr/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h:
 
-/usr/include/c++/13/bits/stl_set.h:
+/usr/include/eigen3/Eigen/src/SparseCore/SparseCwiseBinaryOp.h:
+
+/usr/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h:
 
 /usr/include/eigen3/Eigen/Dense:
 
@@ -2120,9 +2594,15 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/c++/13/compare:
 
-/usr/include/eigen3/Eigen/src/SparseCore/AmbiVector.h:
-
 /usr/include/c++/13/bits/functional_hash.h:
+
+/usr/include/c++/13/variant:
+
+/usr/include/c++/13/bits/atomic_base.h:
+
+/usr/include/eigen3/Eigen/src/Core/MapBase.h:
+
+/usr/include/c++/13/bits/stl_deque.h:
 
 /usr/include/eigen3/Eigen/src/Core/EigenBase.h:
 
@@ -2138,13 +2618,13 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/eigen3/Eigen/src/Core/Array.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/xmmintrin.h:
-
 /usr/include/c++/13/typeinfo:
 
 /usr/include/python3.12/cpython/classobject.h:
 
 /usr/include/c++/13/bits/cxxabi_init_exception.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/rdseedintrin.h:
 
 /usr/include/c++/13/bits/char_traits.h:
 
@@ -2152,11 +2632,17 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h:
 
+/usr/include/x86_64-linux-gnu/bits/select-decl.h:
+
 /usr/include/c++/13/queue:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h:
 
-/usr/include/eigen3/Eigen/src/SparseCore/SparseDenseProduct.h:
+/usr/include/python3.12/cpython/object.h:
+
+/home/olia/Skoltech/Planning/PS2-sampling/rrt/src/bindings.cpp:
+
+/usr/include/c++/13/bits/hashtable_policy.h:
 
 /usr/include/eigen3/Eigen/QR:
 
@@ -2171,6 +2657,14 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
 /usr/include/c++/13/bits/localefwd.h:
+
+/usr/include/eigen3/Eigen/src/Core/IndexedView.h:
+
+/usr/include/eigen3/Eigen/src/Geometry/Umeyama.h:
+
+/usr/include/c++/13/bits/alloc_traits.h:
+
+/usr/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h:
 
 /usr/include/c++/13/climits:
 
@@ -2200,13 +2694,9 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/c++/13/array:
 
-/usr/include/eigen3/Eigen/src/SparseCore/SparseProduct.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/mm_malloc.h:
 
-/usr/include/python3.12/pymem.h:
-
-/usr/include/c++/13/tr1/bessel_function.tcc:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/mmintrin.h:
+/usr/include/c++/13/algorithm:
 
 /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h:
 
@@ -2218,6 +2708,8 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/c++/13/bits/deque.tcc:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/immintrin.h:
+
 /usr/include/c++/13/cwchar:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
@@ -2228,6 +2720,8 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/c++/13/bits/move.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avxneconvertintrin.h:
+
 /usr/include/c++/13/bits/cpp_type_traits.h:
 
 /usr/include/c++/13/cassert:
@@ -2235,8 +2729,6 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 /usr/include/python3.12/floatobject.h:
 
 /usr/include/c++/13/tr1/riemann_zeta.tcc:
-
-/usr/include/eigen3/Eigen/src/Core/util/XprHelper.h:
 
 /usr/include/c++/13/ostream:
 
@@ -2276,11 +2768,11 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/eigen3/Eigen/src/Core/Random.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vnniintrin.h:
+
 /usr/include/python3.12/complexobject.h:
 
 /usr/include/eigen3/Eigen/src/Core/NoAlias.h:
-
-/usr/include/eigen3/Eigen/src/SparseCore/SparseAssign.h:
 
 /usr/include/c++/13/iosfwd:
 
@@ -2292,11 +2784,17 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/c++/13/new:
 
-/usr/include/c++/13/list:
-
 /usr/include/c++/13/vector:
 
 /usr/include/eigen3/Eigen/src/Core/util/Macros.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparseBlock.h:
+
+/usr/include/c++/13/bits/locale_facets.h:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparseUtil.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vlbwintrin.h:
 
 /usr/include/c++/13/atomic:
 
@@ -2306,35 +2804,37 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/eigen3/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h:
 
-/usr/include/c++/13/cxxabi.h:
-
 /usr/include/python3.12/typeslots.h:
 
 /usr/include/c++/13/bits/specfun.h:
 
 /usr/include/c++/13/bits/streambuf.tcc:
 
-/usr/include/c++/13/bits/valarray_array.h:
+/usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512erintrin.h:
 
 /usr/include/c++/13/bits/stl_queue.h:
 
 /home/olia/Skoltech/Planning/PS2-sampling/rrt/include/RRT.hpp:
 
-/usr/include/c++/13/bits/stl_tree.h:
-
 /usr/include/c++/13/bits/ptr_traits.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio2-decl.h:
 
 /usr/include/c++/13/complex:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/lzcntintrin.h:
+
 /usr/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h:
+
+/usr/include/eigen3/Eigen/src/Core/util/XprHelper.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avxintrin.h:
 
 /usr/include/pybind11/detail/typeid.h:
 
 /usr/include/c++/13/bits/stl_tempbuf.h:
-
-/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
-
-/usr/include/c++/13/bits/stl_vector.h:
 
 /usr/include/eigen3/Eigen/src/Core/SolveTriangular.h:
 
@@ -2360,9 +2860,9 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h:
 
-/usr/include/eigen3/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h:
+/usr/include/eigen3/Eigen/src/SparseCore/SparseMap.h:
 
-/usr/include/c++/13/set:
+/usr/include/c++/13/bits/shared_ptr_atomic.h:
 
 /usr/include/python3.12/bltinmodule.h:
 
@@ -2386,9 +2886,9 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/linux/errno.h:
 
-/usr/include/c++/13/bits/std_abs.h:
+/usr/include/x86_64-linux-gnu/bits/wchar2-decl.h:
 
-/usr/include/c++/13/bits/parse_numbers.h:
+/usr/include/c++/13/bits/std_abs.h:
 
 /usr/include/c++/13/bits/postypes.h:
 
@@ -2426,6 +2926,10 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/asm-generic/errno.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/tbmintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/pkuintrin.h:
+
 /usr/include/c++/13/numeric:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
@@ -2437,6 +2941,10 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 /usr/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h:
 
 /usr/include/c++/13/bits/stl_numeric.h:
+
+/usr/include/c++/13/typeindex:
+
+/usr/include/c++/13/bits/stl_uninitialized.h:
 
 /usr/include/c++/13/bits/new_allocator.h:
 
@@ -2468,23 +2976,19 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/c++/13/tr1/beta_function.tcc:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/hresetintrin.h:
+
 /usr/include/c++/13/bits/stl_function.h:
 
 /usr/include/c++/13/bits/utility.h:
 
-/usr/include/eigen3/Eigen/src/SparseCore/MappedSparseMatrix.h:
+/usr/include/c++/13/bits/stl_list.h:
 
 /usr/include/c++/13/debug/debug.h:
 
-/usr/include/c++/13/bits/stl_list.h:
-
 /usr/include/eigen3/Eigen/src/Core/SelfAdjointView.h:
 
-/usr/include/c++/13/bits/vector.tcc:
-
-/usr/include/c++/13/optional:
-
-/usr/include/eigen3/Eigen/src/SparseCore/SparseDot.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmi2intrin.h:
 
 /usr/include/c++/13/stdexcept:
 
@@ -2496,11 +3000,23 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/c++/13/cmath:
 
+/usr/include/x86_64-linux-gnu/bits/select2.h:
+
+/usr/include/linux/types.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vlintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/cetintrin.h:
+
 /usr/include/c++/13/debug/assertions.h:
 
 /usr/include/python3.12/cpython/floatobject.h:
 
 /usr/include/c++/13/tr1/gamma.tcc:
+
+/usr/include/eigen3/Eigen/src/SparseCore/SparseFuzzy.h:
+
+/usr/include/c++/13/ext/atomicity.h:
 
 /usr/include/c++/13/deque:
 
@@ -2518,23 +3034,17 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/eigen3/Eigen/src/Core/CwiseTernaryOp.h:
 
-/usr/include/c++/13/bits/unordered_set.h:
-
-/usr/include/python3.12/fileobject.h:
-
-/usr/include/python3.12/enumobject.h:
-
-/usr/include/eigen3/Eigen/src/SparseCore/SparseRef.h:
-
 /usr/include/c++/13/ext/string_conversions.h:
 
-/usr/include/eigen3/Eigen/src/Core/arch/Default/Half.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512ifmaintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512fp16vlintrin.h:
 
 /usr/include/c++/13/bits/exception.h:
 
-/usr/include/eigen3/Eigen/src/Core/arch/Default/Settings.h:
+/usr/include/eigen3/Eigen/src/Core/arch/Default/Half.h:
 
-/usr/include/asm-generic/posix_types.h:
+/usr/include/eigen3/Eigen/src/Core/arch/Default/Settings.h:
 
 /usr/include/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h:
 
@@ -2551,8 +3061,6 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 /usr/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h:
 
 /usr/include/eigen3/Eigen/src/Core/functors/StlFunctors.h:
-
-/home/olia/Skoltech/Planning/PS2-sampling/rrt/src/Tree.cpp:
 
 /usr/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h:
 
@@ -2580,13 +3088,11 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h:
+/usr/include/eigen3/Eigen/src/SparseCore/SparseRedux.h:
 
-/usr/include/x86_64-linux-gnu/bits/errno.h:
+/usr/include/c++/13/backward/binders.h:
 
-/usr/include/c++/13/valarray:
-
-/usr/include/eigen3/Eigen/src/Core/util/BlasUtil.h:
+/usr/include/eigen3/Eigen/src/Geometry/Rotation2D.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
@@ -2602,21 +3108,19 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
-/usr/include/c++/13/backward/binders.h:
-
-/usr/include/eigen3/Eigen/src/Geometry/Rotation2D.h:
-
-/usr/include/eigen3/Eigen/src/SparseCore/SparseRedux.h:
-
 /usr/include/eigen3/Eigen/src/Core/util/Memory.h:
 
 /usr/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h:
 
 /usr/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512pfintrin.h:
+
 /usr/include/eigen3/Eigen/src/Core/util/ReshapedHelper.h:
 
 /usr/include/eigen3/Eigen/src/Core/util/StaticAssert.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/amxint8intrin.h:
 
 /usr/include/eigen3/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h:
 
@@ -2626,15 +3130,17 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vp2intersectvlintrin.h:
+
 /usr/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h:
 
 /usr/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/xtestintrin.h:
+
 /usr/include/sched.h:
 
 /usr/include/wctype.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h:
 
 /usr/include/eigen3/Eigen/src/Geometry/OrthoMethods.h:
 
@@ -2647,10 +3153,6 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 /usr/include/python3.12/cpython/pyframe.h:
 
 /usr/include/eigen3/Eigen/src/Geometry/RotationBase.h:
-
-/usr/include/c++/13/bits/alloc_traits.h:
-
-/usr/include/eigen3/Eigen/src/Geometry/Umeyama.h:
 
 /usr/include/eigen3/Eigen/src/Geometry/arch/Geometry_SIMD.h:
 
@@ -2681,6 +3183,8 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 /usr/include/eigen3/Eigen/src/Jacobi/Jacobi.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/sgxintrin.h:
 
 /usr/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h:
 
@@ -2714,6 +3218,8 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/eigen3/Eigen/src/SVD/SVDBase.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/xsavesintrin.h:
+
 /usr/include/eigen3/Eigen/src/misc/Kernel.h:
 
 /usr/include/eigen3/Eigen/src/SVD/BDCSVD.h:
@@ -2724,11 +3230,13 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h:
 
-/usr/include/c++/13/bits/valarray_array.tcc:
+/usr/include/eigen3/Eigen/src/Core/util/BlasUtil.h:
 
-/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vldqintrin.h:
 
 /usr/include/eigen3/Eigen/src/SparseCore/SparseCompressedBase.h:
+
+/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:
 
 /usr/include/eigen3/Eigen/src/plugins/BlockMethods.h:
 
@@ -2739,6 +3247,8 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 /usr/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512fintrin.h:
 
 /usr/include/x86_64-linux-gnu/asm/types.h:
 
@@ -2755,6 +3265,8 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 /usr/include/c++/13/bits/erase_if.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmivlintrin.h:
 
 /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h:
 
@@ -2775,6 +3287,8 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 /usr/include/linux/limits.h:
 
 /usr/include/locale.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vpopcntdqintrin.h:
 
 /usr/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h:
 
@@ -2816,23 +3330,27 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/python3.12/traceback.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bwintrin.h:
+
 /usr/include/x86_64-linux-gnu/bits/local_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/locale.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/waitpkgintrin.h:
+
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls.h:
-
-/usr/include/c++/13/bits/stl_relops.h:
 
 /usr/include/python3.12/fileutils.h:
 
@@ -2854,13 +3372,21 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h:
 
+/usr/include/x86_64-linux-gnu/bits/stdio.h:
+
+/usr/include/c++/13/bits/unordered_set.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/clwbintrin.h:
+
 /usr/include/eigen3/Eigen/src/Core/Fuzzy.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
-/usr/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h:
-
 /usr/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h:
+
+/usr/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h:
 
 /usr/include/x86_64-linux-gnu/bits/timex.h:
 
@@ -2870,6 +3396,22 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
+/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
+
+/usr/include/c++/13/bits/stl_vector.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib.h:
+
+/usr/include/c++/13/initializer_list:
+
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/clflushoptintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx2intrin.h:
+
+/usr/include/x86_64-linux-gnu/bits/strings_fortified.h:
+
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
 /usr/include/python3.12/cpython/bytesobject.h:
@@ -2877,6 +3419,8 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512ifmavlintrin.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
@@ -2886,10 +3430,6 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_statx.h:
-
-/usr/include/c++/13/bits/stl_multimap.h:
-
 /usr/include/c++/13/cstdio:
 
 /usr/include/math.h:
@@ -2898,11 +3438,9 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h:
+/usr/include/c++/13/bits/list.tcc:
 
 /usr/include/features-time64.h:
-
-/usr/include/c++/13/bits/list.tcc:
 
 /usr/include/c++/13/type_traits:
 
@@ -2912,15 +3450,7 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
-/usr/include/eigen3/Eigen/src/Geometry/Homogeneous.h:
-
-/usr/include/asm-generic/bitsperlong.h:
-
-/usr/include/c++/13/tr1/legendre_function.tcc:
-
-/usr/include/asm-generic/types.h:
-
-/usr/include/eigen3/Eigen/src/SparseCore/SparseCwiseUnaryOp.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512fp16intrin.h:
 
 /usr/include/python3.12/object.h:
 
@@ -2932,9 +3462,9 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
-/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avxifmaintrin.h:
 
-/usr/include/c++/13/bits/stream_iterator.h:
+/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
@@ -2945,10 +3475,6 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 /usr/include/eigen3/Eigen/src/Core/ArrayWrapper.h:
 
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
-
-/usr/include/c++/13/ext/atomicity.h:
-
-/usr/include/eigen3/Eigen/src/SparseCore/SparseFuzzy.h:
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
@@ -2968,25 +3494,19 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h:
 
-/usr/include/python3.12/cpython/object.h:
-
-/usr/include/c++/13/bits/hashtable_policy.h:
-
-/home/olia/Skoltech/Planning/PS2-sampling/rrt/src/bindings.cpp:
-
 /usr/include/python3.12/cpython/pytime.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/rtmintrin.h:
 
 /usr/include/c++/13/bits/ostream.tcc:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
-
 /usr/include/c++/13/bits/gslice_array.h:
 
-/usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
 
-/usr/include/c++/13/bits/forward_list.tcc:
+/usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h:
 
 /usr/include/python3.12/pystrcmp.h:
 
@@ -3004,66 +3524,82 @@ CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h:
 
-/usr/include/c++/13/algorithm:
+/usr/include/eigen3/Eigen/src/Core/VectorBlock.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/mm_malloc.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bf16vlintrin.h:
 
-/usr/include/c++/13/bits/forward_list.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avxvnniintrin.h:
 
-/usr/include/c++/13/bits/gslice.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/adxintrin.h:
 
-/usr/include/c++/13/bits/indirect_array.h:
+/usr/include/c++/13/stdlib.h:
 
-/usr/include/c++/13/bits/slice_array.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/amxbf16intrin.h:
 
-/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
+/usr/include/eigen3/Eigen/Cholesky:
 
-/usr/include/c++/13/bits/stl_map.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/amxcomplexintrin.h:
 
-/usr/include/c++/13/bits/stl_multiset.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/amxfp16intrin.h:
 
-/usr/include/c++/13/bits/valarray_before.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/amxtileintrin.h:
 
-/usr/include/c++/13/tr1/exp_integral.tcc:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx5124fmapsintrin.h:
 
-/usr/include/c++/13/math.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx5124vnniwintrin.h:
 
-/usr/include/c++/13/bits/stl_uninitialized.h:
+/usr/include/c++/13/bits/shared_ptr_base.h:
 
-/usr/include/c++/13/typeindex:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bf16intrin.h:
 
-/usr/include/eigen3/Eigen/src/Core/MapBase.h:
+/usr/include/pybind11/buffer_info.h:
 
-/usr/include/c++/13/bits/atomic_base.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512bitalgintrin.h:
 
-/usr/include/c++/13/variant:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512cdintrin.h:
 
-/usr/include/c++/13/version:
+/usr/include/eigen3/Eigen/src/Core/Block.h:
 
-/usr/include/eigen3/Eigen/src/SparseCore/CompressedStorage.h:
+/usr/include/c++/13/bits/random.tcc:
 
-/usr/include/c++/13/bits/locale_facets.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmi2vlintrin.h:
 
-/usr/include/eigen3/Eigen/src/SparseCore/SparseBlock.h:
+/usr/include/x86_64-linux-gnu/bits/wchar2.h:
 
-/usr/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmiintrin.h:
 
-/usr/include/eigen3/Eigen/src/SparseCore/SparseCwiseBinaryOp.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/mwaitintrin.h:
 
-/usr/include/eigen3/Eigen/src/Core/Diagonal.h:
+/usr/include/c++/13/bits/vector.tcc:
 
-/usr/include/eigen3/Eigen/src/SparseCore/SparseDiagonalProduct.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vnnivlintrin.h:
 
-/usr/include/c++/13/bits/shared_ptr_atomic.h:
+/usr/include/eigen3/Eigen/src/Core/util/MKL_support.h:
 
-/usr/include/eigen3/Eigen/src/SparseCore/SparseMap.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vp2intersectintrin.h:
 
-/usr/include/c++/13/utility:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vpopcntdqvlintrin.h:
 
-/usr/include/eigen3/Eigen/src/SparseCore/SparseMatrixBase.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avxvnniint8intrin.h:
 
-/usr/include/eigen3/Eigen/src/Core/NumTraits.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/bmi2intrin.h:
 
-/usr/include/eigen3/Eigen/src/SparseCore/SparseSelfAdjointView.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/bmiintrin.h:
 
-/usr/include/eigen3/Eigen/src/SparseCore/SparseSolverBase.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/cldemoteintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/clzerointrin.h:
+
+/usr/include/c++/13/bits/memoryfwd.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/f16cintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/fmaintrin.h:
+
+/usr/include/eigen3/Eigen/src/Core/Redux.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/gfniintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/ia32intrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/keylockerintrin.h:

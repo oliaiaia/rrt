@@ -6,5 +6,5 @@ CXX_DEFINES = -Drtt_planning_lib_EXPORTS
 
 CXX_INCLUDES = -I/home/olia/Skoltech/Planning/PS2-sampling/rrt/include -isystem /usr/include/python3.12 -isystem /usr/include/eigen3
 
-CXX_FLAGS = -fPIC -fvisibility=hidden -flto -fno-fat-lto-objects
+CXX_FLAGS =  -O3 -march=native -DNDEBUG -std=c++17 -fPIC -fvisibility=hidden -O3 -march=native -DNDEBUG -flto -fno-fat-lto-objects
 

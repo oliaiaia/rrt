@@ -65,9 +65,6 @@ public:
     }
 
 
-     void setStepSize(double fractionOfTheDifferenceInAngles) {
-        rrt.setFractionOfTheDifferenceInAngles(fractionOfTheDifferenceInAngles);
-    }
 
     void setIntermediateSteps(double onHowManyStepsDevideAngleDistanceBtw2States) {
         rrt.setOnHowManyStepsDevideAngleDistanceBtw2States(onHowManyStepsDevideAngleDistanceBtw2States);
@@ -99,6 +96,7 @@ public:
             goalAngles.push_back(goalStateAngles[i].cast<double>());
         }
         stateGOAL = State(goalAngles);
+        rrt.setGoalState(stateGOAL);
     }
 
     bool launch()
@@ -108,7 +106,7 @@ public:
 
     py::list sample()
     {
-        State stateRANDOM = rrt.sample();
+        State stateRANDOM = rrt.smartSample();
         return state_to_angles_list(stateRANDOM);
     }
 
@@ -139,9 +137,9 @@ public:
         return fullPlan;
     }
 
-    bool checkCollisioin(const py::list& stateAngle, double treashold) {
+    bool checkCollisioin(const py::list& stateAngle) {
         State s = State(py_list_to_vector1d_double(stateAngle));
-        return env.checkCollision(s, treashold);
+        return env.checkCollision(s);
     }
 
 private:
@@ -170,13 +168,6 @@ PYBIND11_MODULE(rtt_planning_lib, m)
              "Args:\n"
              "    obstacles: list of obstacles")
 
-        .def("set_step_size", &PyRRT::setStepSize,
-             py::arg("step_size"),
-             "Set step size for RRT expansion\n"
-             "Args:\n"
-             "    step_size: fraction of angle difference for steering (0.0 - 1.0)\n"
-             "               smaller values = smaller steps, more precision")
-        
         .def("set_intermediate_steps", &PyRRT::setIntermediateSteps,
              py::arg("num_steps"),
              "Set number of intermediate steps for collision checking\n"
@@ -239,7 +230,6 @@ PYBIND11_MODULE(rtt_planning_lib, m)
 
         .def("check_collision", &PyRRT::checkCollisioin,
              py::arg("state_angles"),
-             py::arg("threshold"),
              "Check if a configuration is in collision\n"
              "Args:\n"
              "    state_angles: list of joint angles\n"

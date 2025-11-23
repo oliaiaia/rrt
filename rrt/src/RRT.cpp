@@ -18,13 +18,30 @@ State RRT::sample()
     return State(angles);
 }
 
+State RRT::smartSample()
+{
+    static std::random_device rd;
+    static std::mt19937 gen(rd());
+    std::uniform_real_distribution<double> dist(-180.0, 180.0);
+    std::uniform_real_distribution<double> prob_dist(0.0, 1.0);
+
+    if (prob_dist(gen) < goalBiasProbability && !goalState.angleVector.isZero())
+    {
+        return goalState;
+    }
+
+    std::vector<double> angles{dist(gen), dist(gen), dist(gen), dist(gen)};
+    return State(angles);
+}
+
 bool RRT::launch(State stateSTART, State stateGOAL)
 {
     Tree *newTree = new Tree(stateSTART);
     tree = *newTree;
     delete newTree;
 
-    std::cout << "RRT TREE created" << "\n";
+    goalState = stateGOAL;
+    startState = stateSTART;
 
     int iter = 0;
 
@@ -32,47 +49,57 @@ bool RRT::launch(State stateSTART, State stateGOAL)
     {
         iter++;
 
-        State q_rand = sample();
+        State q_rand = smartSample();
 
         std::shared_ptr<Node> q_near = tree.findNearest(q_rand);
         State q_new = steer(q_rand, q_near->value);
 
         std::shared_ptr<Node> q_new_node = nullptr;
 
+        // check collision along the path
         if (checkStatesBtw(q_new, q_near->value))
         {
             q_new_node = tree.addNode(q_near, q_new);
-            std::cout << "add new Node to the tree" << "\n";
+            // std::cout << "q_near" << "\n"
+                    //   << q_near->value.angleVector << "\n";
+            // std::cout << "q_new_node" << "\n"
+                    //   << q_new_node->value.angleVector << "\n";
+            // std::cout << "add new node to the tree" << "\n";
         }
+
 
         if (q_new_node && checkGoalTreashold(q_new, stateGOAL))
         {
             nodeGOAL = tree.addNode(q_new_node, stateGOAL);
+            std::cout << "=========================================================" << "\n";
+            std::cout << "Find the path!" << "\n";
+            std::cout << "=========================================================" << "\n";
+            std::cout << "Iteration: " << iter << "\n";
             return true;
         }
 
-        if (iter > 20000)
+        if (iter > 200000)
             return false;
-        std::cout << "=========================================================" << "\n";
-        std::cout << "ITER: " << iter << "\n";
-        std::cout << "=========================================================" << "\n";
+        // std::cout << "ITER: " << iter << "\n";
     }
 }
 
 State RRT::steer(const State &q_rand, const State &q_near)
 {
     std::vector<double> angles(4);
-
-    double localStep = fractionOfTheDifferenceInAngles;
-
     bool needReduce = false;
+    double maxDiff = treasholdOneStepDegree;
 
     for (int i = 0; i < q_near.joints; i++)
     {
         double delta = normalizeAngle(q_rand.angleVector(i) - q_near.angleVector(i));
-        double a = q_near.angleVector(i) + delta * localStep;
 
-        if (std::fabs(a) > treasholdOneStepDegree)
+        if (delta >= maxDiff)
+        {
+            maxDiff = delta;
+        }
+
+        if (std::fabs(delta) > treasholdOneStepDegree)
         {
             needReduce = true;
         }
@@ -80,33 +107,14 @@ State RRT::steer(const State &q_rand, const State &q_near)
 
     if (needReduce)
     {
-        while (true)
+        double fractionOfTheDifference = treasholdOneStepDegree / maxDiff;
+
+        for (int i = 0; i < q_near.joints; i++)
         {
-            localStep /= 2.0;
-
-            bool ok = true;
-            for (int i = 0; i < q_near.joints; i++)
-            {
-                double delta = normalizeAngle(q_rand.angleVector(i) - q_near.angleVector(i));
-                double a = q_near.angleVector(i) + delta * localStep;
-
-                if (std::fabs(a) > treasholdToTheGoalDegree)
-                    ok = false;
-            }
-
-            if (ok)
-                break;
-            if (localStep < 1e-6)
-                break;
+            double delta = normalizeAngle(q_rand.angleVector(i) - q_near.angleVector(i));
+            angles[i] = normalizeAngle(q_near.angleVector(i) + fractionOfTheDifference * delta);
         }
     }
-
-    for (int i = 0; i < q_near.joints; i++)
-    {
-        double delta = normalizeAngle(q_rand.angleVector(i) - q_near.angleVector(i));
-        angles[i] = q_near.angleVector(i) + delta * localStep;
-    }
-
     return State(angles);
 }
 
@@ -143,7 +151,7 @@ bool RRT::checkStatesBtw(const State &q_new, const State &q_near)
 
     for (const auto &s : vec)
     {
-        if (env.checkCollision(s, 0.0))
+        if (env.checkCollision(s))
             return false;
     }
     return true;
@@ -151,7 +159,6 @@ bool RRT::checkStatesBtw(const State &q_new, const State &q_near)
 
 bool RRT::checkGoalTreashold(const State &q_new, const State &q_goal)
 {
-    std::cout << tree.weightedDistance(q_new, q_goal) << "\n";
     return tree.weightedDistance(q_new, q_goal) <= treasholdToTheGoalDegree;
 }
 
@@ -169,5 +176,7 @@ std::vector<State> RRT::getPlan()
     }
 
     std::reverse(plan.begin(), plan.end());
+    std::cout << "Plan length: " << plan.size() << "\n";
+
     return plan;
 }
