@@ -7,7 +7,8 @@
 
 #include "Environment.hpp"
 
-struct Node {
+struct Node
+{
     State value;
     std::shared_ptr<Node> parentPtr;
     std::vector<std::shared_ptr<Node>> children;
@@ -16,42 +17,50 @@ struct Node {
     Node(State state) : value(state) {}
 };
 
-class Tree {
+class Tree
+{
 private:
     std::shared_ptr<Node> root;
+    std::vector<double>weights = {1.0, 1.0, 1.0, 1.0};
 
 public:
-    std::function<double(const State&, const State&)> distanceFunction;
 
     Tree() = default;
-    Tree(State rootState, std::function<double(const State&, const State&)> distanceFunction = nullptr) {
+    Tree(State rootState)
+    {
         root = std::make_shared<Node>(rootState);
-        
-        if (!distanceFunction) {
-            this->distanceFunction = [this](const State& q1, const State& q2) {
-                return manhattanDistance(q1, q2);
-            };
-        } else {
-            this->distanceFunction = distanceFunction;
-        }
+
     }
 
-    double manhattanDistance(const State& q1, const State& q2) const;
+    void setWeight1(double w) { weights[0] = w; }
+    void setWeight2(double w) { weights[1] = w; }
+    void setWeight3(double w) { weights[2] = w; }
+    void setWeight4(double w) { weights[3] = w; }
 
-    std::shared_ptr<Node> findNearestRecursive(const State& target);
+    void setWeights(double w1, double w2, double w3, double w4) {
+        weights[0] = w1;
+        weights[1] = w2;
+        weights[2] = w3;
+        weights[3] = w4;
+    }
 
-    std::shared_ptr<Node> findNearest(const State& target);
+    double weightedDistance(const State &q1, const State &q2) const;
 
-    std::shared_ptr<Node> addNode(std::shared_ptr<Node> parent, const State& state);
+    std::shared_ptr<Node> findNearestRecursive(const State &target);
 
-    std::shared_ptr<Node> getRoot() const {
+    std::shared_ptr<Node> findNearest(const State &target);
+
+    std::shared_ptr<Node> addNode(std::shared_ptr<Node> parent, const State &state);
+
+    std::shared_ptr<Node> getRoot() const
+    {
         return root;
     }
-    std::shared_ptr<Node> findNearestRecursiveHelper(const std::shared_ptr<Node>& current,
-                                                    const State& target,
-                                                    std::shared_ptr<Node> bestNode,
-                                                    double bestDistance);
+    std::shared_ptr<Node> findNearestRecursiveHelper(const std::shared_ptr<Node> &current,
+                                                     const State &target,
+                                                     std::shared_ptr<Node> bestNode,
+                                                     double bestDistance);
 
     // BFS
-    std::shared_ptr<Node> findNearestBFS(const State& target);
+    std::shared_ptr<Node> findNearestBFS(const State &target);
 };

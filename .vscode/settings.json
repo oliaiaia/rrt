@@ -53,6 +53,8 @@
         "__verbose_abort": "cpp",
         "ios": "cpp",
         "locale": "cpp",
-        "core": "cpp"
+        "core": "cpp",
+        "filesystem": "cpp",
+        "iostream": "cpp"
     }
 }

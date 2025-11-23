@@ -3,9 +3,22 @@
 #include <vector>
 #include <Eigen/Dense>
 #include <cmath>
+#include <iostream> 
 
 struct Obstacle
 {
+    Obstacle() = default;
+
+    Obstacle(std::vector<double> obs) {
+        if(obs.size() != 3) {
+            std::cout << "Uncorrect size of obstacle" << "\n";
+            return;
+        }
+        x = obs[0];
+        y = obs[1];
+        R = obs[2];
+    }
+
     double x, y;
     double R;
 };
@@ -17,7 +30,7 @@ struct State
     int joints;
 
     State() = default;
-    
+
     State(const std::vector<double> &angles)
     {
         joints = 4;
@@ -84,6 +97,13 @@ struct State
 struct Environment
 {
     std::vector<Obstacle> obstacles;
+    
+    Environment() = default;
+    Environment(std::vector<Obstacle> obstacles): obstacles(obstacles){}
+
+    void addObstacle(Obstacle obstacle) {
+        obstacles.push_back(obstacle);
+    }
 
     bool checkCollision(const State &s, double collisionThreshold)
     {

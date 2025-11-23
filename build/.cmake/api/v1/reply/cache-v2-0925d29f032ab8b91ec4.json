@@ -1218,42 +1218,6 @@
 			"value" : ".cpython-312-x86_64-linux-gnu.so"
 		},
 		{
-			"name" : "Project_BINARY_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "/home/olia/Skoltech/Planning/PS2-sampling/build"
-		},
-		{
-			"name" : "Project_IS_TOP_LEVEL",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "ON"
-		},
-		{
-			"name" : "Project_SOURCE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "/home/olia/Skoltech/Planning/PS2-sampling/rrt"
-		},
-		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
 			"properties" : 
 			[
@@ -1374,18 +1338,6 @@
 			"value" : "4c8bfa8951e99fa32e4000a94f8c04a2"
 		},
 		{
-			"name" : "_Python_Interpreter_REASON_FAILURE",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Interpreter reason failure"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : ""
-		},
-		{
 			"name" : "_Python_LIBRARY_RELEASE",
 			"properties" : 
 			[
@@ -1408,42 +1360,6 @@
 			],
 			"type" : "INTERNAL",
 			"value" : ""
-		},
-		{
-			"name" : "discreate_planning_lib_BINARY_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "/home/olia/Skoltech/Planning/PS2-sampling/build"
-		},
-		{
-			"name" : "discreate_planning_lib_IS_TOP_LEVEL",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "ON"
-		},
-		{
-			"name" : "discreate_planning_lib_SOURCE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "/home/olia/Skoltech/Planning/PS2-sampling/rrt"
 		},
 		{
 			"name" : "pybind11_DIR",
@@ -1504,18 +1420,6 @@
 			],
 			"type" : "STATIC",
 			"value" : "/home/olia/Skoltech/Planning/PS2-sampling/rrt"
-		},
-		{
-			"name" : "users_LIB_DEPENDS",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Dependencies for the target"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "general;CURL::libcurl;general;nlohmann_json::nlohmann_json;"
 		}
 	],
 	"kind" : "cache",

@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "rtt_planning::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-rtt_planning-Debug-8077059ebf121411d3b1.json",
-					"name" : "rtt_planning",
+					"id" : "rtt_planning_lib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rtt_planning_lib-Debug-1aad5c98f497ccc47a10.json",
+					"name" : "rtt_planning_lib",
 					"projectIndex" : 0
 				}
 			]

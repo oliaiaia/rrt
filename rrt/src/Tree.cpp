@@ -1,14 +1,20 @@
 #include "Tree.hpp"
 
-double Tree::manhattanDistance(const State &q1, const State &q2) const
+
+
+double Tree::weightedDistance(const State &q1, const State &q2) const
 {
     double distance = 0.0;
-    for (int i = 1; i <= 4; ++i)
+
+    for (int i = 0; i < 4; ++i)
     {
-        for (int j = 0; j <= 1; ++j)
-        {
-            distance += abs(q1.jointsMatrix(i, j) - q2.jointsMatrix(i, j));
+        double diff = std::abs(q1.angleVector(i) - q2.angleVector(i));
+        
+        if (diff > 180.0) {
+            diff = 360.0 - diff;
         }
+        
+        distance += diff * weights[i];
     }
     return distance;
 }
@@ -42,7 +48,7 @@ std::shared_ptr<Node> Tree::findNearestRecursiveHelper(const std::shared_ptr<Nod
     if (!current)
         return bestNode;
 
-    double currentDistance = distanceFunction(current->value, target);
+    double currentDistance = weightedDistance(current->value, target);
     if (currentDistance < bestDistance)
     {
         bestDistance = currentDistance;
@@ -52,7 +58,7 @@ std::shared_ptr<Node> Tree::findNearestRecursiveHelper(const std::shared_ptr<Nod
     for (const auto &child : current->children)
     {
         bestNode = findNearestRecursiveHelper(child, target, bestNode, bestDistance);
-        bestDistance = distanceFunction(bestNode->value, target);
+        bestDistance = weightedDistance(bestNode->value, target);
     }
 
     return bestNode;
@@ -65,7 +71,7 @@ std::shared_ptr<Node> Tree::findNearestBFS(const State &target)
         return nullptr;
 
     std::shared_ptr<Node> bestNode = root;
-    double bestDistance = distanceFunction(root->value, target);
+    double bestDistance = weightedDistance(root->value, target);
 
     std::queue<std::shared_ptr<Node>> queue;
     queue.push(root);
@@ -75,7 +81,7 @@ std::shared_ptr<Node> Tree::findNearestBFS(const State &target)
         auto current = queue.front();
         queue.pop();
 
-        double currentDistance = distanceFunction(current->value, target);
+        double currentDistance = weightedDistance(current->value, target);
         if (currentDistance < bestDistance)
         {
             bestDistance = currentDistance;

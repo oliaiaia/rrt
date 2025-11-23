@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named rtt_planning
+# Target rules for targets named rtt_planning_lib
 
 # Build rule for target.
-rtt_planning: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rtt_planning
-.PHONY : rtt_planning
+rtt_planning_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rtt_planning_lib
+.PHONY : rtt_planning_lib
 
 # fast build rule for target.
-rtt_planning/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtt_planning.dir/build.make CMakeFiles/rtt_planning.dir/build
-.PHONY : rtt_planning/fast
+rtt_planning_lib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtt_planning_lib.dir/build.make CMakeFiles/rtt_planning_lib.dir/build
+.PHONY : rtt_planning_lib/fast
 
 src/RRT.o: src/RRT.cpp.o
 .PHONY : src/RRT.o
 
 # target to build an object file
 src/RRT.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtt_planning.dir/build.make CMakeFiles/rtt_planning.dir/src/RRT.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtt_planning_lib.dir/build.make CMakeFiles/rtt_planning_lib.dir/src/RRT.cpp.o
 .PHONY : src/RRT.cpp.o
 
 src/RRT.i: src/RRT.cpp.i
@@ -142,7 +142,7 @@ src/RRT.i: src/RRT.cpp.i
 
 # target to preprocess a source file
 src/RRT.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtt_planning.dir/build.make CMakeFiles/rtt_planning.dir/src/RRT.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtt_planning_lib.dir/build.make CMakeFiles/rtt_planning_lib.dir/src/RRT.cpp.i
 .PHONY : src/RRT.cpp.i
 
 src/RRT.s: src/RRT.cpp.s
@@ -150,7 +150,7 @@ src/RRT.s: src/RRT.cpp.s
 
 # target to generate assembly for a file
 src/RRT.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtt_planning.dir/build.make CMakeFiles/rtt_planning.dir/src/RRT.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtt_planning_lib.dir/build.make CMakeFiles/rtt_planning_lib.dir/src/RRT.cpp.s
 .PHONY : src/RRT.cpp.s
 
 src/Tree.o: src/Tree.cpp.o
@@ -158,7 +158,7 @@ src/Tree.o: src/Tree.cpp.o
 
 # target to build an object file
 src/Tree.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtt_planning.dir/build.make CMakeFiles/rtt_planning.dir/src/Tree.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtt_planning_lib.dir/build.make CMakeFiles/rtt_planning_lib.dir/src/Tree.cpp.o
 .PHONY : src/Tree.cpp.o
 
 src/Tree.i: src/Tree.cpp.i
@@ -166,7 +166,7 @@ src/Tree.i: src/Tree.cpp.i
 
 # target to preprocess a source file
 src/Tree.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtt_planning.dir/build.make CMakeFiles/rtt_planning.dir/src/Tree.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtt_planning_lib.dir/build.make CMakeFiles/rtt_planning_lib.dir/src/Tree.cpp.i
 .PHONY : src/Tree.cpp.i
 
 src/Tree.s: src/Tree.cpp.s
@@ -174,32 +174,32 @@ src/Tree.s: src/Tree.cpp.s
 
 # target to generate assembly for a file
 src/Tree.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtt_planning.dir/build.make CMakeFiles/rtt_planning.dir/src/Tree.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtt_planning_lib.dir/build.make CMakeFiles/rtt_planning_lib.dir/src/Tree.cpp.s
 .PHONY : src/Tree.cpp.s
 
-src/test.o: src/test.cpp.o
-.PHONY : src/test.o
+src/bindings.o: src/bindings.cpp.o
+.PHONY : src/bindings.o
 
 # target to build an object file
-src/test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtt_planning.dir/build.make CMakeFiles/rtt_planning.dir/src/test.cpp.o
-.PHONY : src/test.cpp.o
+src/bindings.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtt_planning_lib.dir/build.make CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o
+.PHONY : src/bindings.cpp.o
 
-src/test.i: src/test.cpp.i
-.PHONY : src/test.i
+src/bindings.i: src/bindings.cpp.i
+.PHONY : src/bindings.i
 
 # target to preprocess a source file
-src/test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtt_planning.dir/build.make CMakeFiles/rtt_planning.dir/src/test.cpp.i
-.PHONY : src/test.cpp.i
+src/bindings.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtt_planning_lib.dir/build.make CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.i
+.PHONY : src/bindings.cpp.i
 
-src/test.s: src/test.cpp.s
-.PHONY : src/test.s
+src/bindings.s: src/bindings.cpp.s
+.PHONY : src/bindings.s
 
 # target to generate assembly for a file
-src/test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtt_planning.dir/build.make CMakeFiles/rtt_planning.dir/src/test.cpp.s
-.PHONY : src/test.cpp.s
+src/bindings.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtt_planning_lib.dir/build.make CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.s
+.PHONY : src/bindings.cpp.s
 
 # Help Target
 help:
@@ -209,16 +209,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... rtt_planning"
+	@echo "... rtt_planning_lib"
 	@echo "... src/RRT.o"
 	@echo "... src/RRT.i"
 	@echo "... src/RRT.s"
 	@echo "... src/Tree.o"
 	@echo "... src/Tree.i"
 	@echo "... src/Tree.s"
-	@echo "... src/test.o"
-	@echo "... src/test.i"
-	@echo "... src/test.s"
+	@echo "... src/bindings.o"
+	@echo "... src/bindings.i"
+	@echo "... src/bindings.s"
 .PHONY : help
 
 

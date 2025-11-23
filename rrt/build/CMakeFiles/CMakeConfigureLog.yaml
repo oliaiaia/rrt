@@ -529,3 +529,46 @@ events:
       
       
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "/usr/lib/cmake/pybind11/pybind11Common.cmake:276 (check_cxx_compiler_flag)"
+      - "/usr/lib/cmake/pybind11/pybind11Common.cmake:318 (_pybind11_return_if_cxx_and_linker_flags_work)"
+      - "/usr/lib/cmake/pybind11/pybind11Common.cmake:385 (_pybind11_generate_lto)"
+      - "/usr/lib/cmake/pybind11/pybind11Config.cmake:250 (include)"
+      - "CMakeLists.txt:21 (find_package)"
+    checks:
+      - "Performing Test HAS_FLTO"
+    directories:
+      source: "/home/olia/Skoltech/Planning/PS2-sampling/rrt/build/CMakeFiles/CMakeScratch/TryCompile-9uhQLU"
+      binary: "/home/olia/Skoltech/Planning/PS2-sampling/rrt/build/CMakeFiles/CMakeScratch/TryCompile-9uhQLU"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "HAS_FLTO"
+      cached: true
+      stdout: |
+        Change Dir: '/home/olia/Skoltech/Planning/PS2-sampling/rrt/build/CMakeFiles/CMakeScratch/TryCompile-9uhQLU'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d289d/fast
+        gmake[1]: Entering directory '/home/olia/Skoltech/Planning/PS2-sampling/rrt/build/CMakeFiles/CMakeScratch/TryCompile-9uhQLU'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d289d.dir/build.make CMakeFiles/cmTC_d289d.dir/build
+        gmake[2]: Entering directory '/home/olia/Skoltech/Planning/PS2-sampling/rrt/build/CMakeFiles/CMakeScratch/TryCompile-9uhQLU'
+        Building CXX object CMakeFiles/cmTC_d289d.dir/src.cxx.o
+        /usr/bin/c++ -DHAS_FLTO  -flto -fno-fat-lto-objects -o CMakeFiles/cmTC_d289d.dir/src.cxx.o -c /home/olia/Skoltech/Planning/PS2-sampling/rrt/build/CMakeFiles/CMakeScratch/TryCompile-9uhQLU/src.cxx
+        Linking CXX executable cmTC_d289d
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d289d.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_d289d.dir/src.cxx.o -o cmTC_d289d  -flto 
+        gmake[2]: Leaving directory '/home/olia/Skoltech/Planning/PS2-sampling/rrt/build/CMakeFiles/CMakeScratch/TryCompile-9uhQLU'
+        gmake[1]: Leaving directory '/home/olia/Skoltech/Planning/PS2-sampling/rrt/build/CMakeFiles/CMakeScratch/TryCompile-9uhQLU'
+        
+      exitCode: 0
+...

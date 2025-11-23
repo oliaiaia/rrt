@@ -24,6 +24,8 @@ bool RRT::launch(State stateSTART, State stateGOAL)
     tree = *newTree;
     delete newTree;
 
+    std::cout << "RRT TREE created" << "\n";
+
     int iter = 0;
 
     while (true)
@@ -31,6 +33,7 @@ bool RRT::launch(State stateSTART, State stateGOAL)
         iter++;
 
         State q_rand = sample();
+
         std::shared_ptr<Node> q_near = tree.findNearest(q_rand);
         State q_new = steer(q_rand, q_near->value);
 
@@ -39,6 +42,7 @@ bool RRT::launch(State stateSTART, State stateGOAL)
         if (checkStatesBtw(q_new, q_near->value))
         {
             q_new_node = tree.addNode(q_near, q_new);
+            std::cout << "add new Node to the tree" << "\n";
         }
 
         if (q_new_node && checkGoalTreashold(q_new, stateGOAL))
@@ -49,6 +53,9 @@ bool RRT::launch(State stateSTART, State stateGOAL)
 
         if (iter > 20000)
             return false;
+        std::cout << "=========================================================" << "\n";
+        std::cout << "ITER: " << iter << "\n";
+        std::cout << "=========================================================" << "\n";
     }
 }
 
@@ -56,7 +63,7 @@ State RRT::steer(const State &q_rand, const State &q_near)
 {
     std::vector<double> angles(4);
 
-    double localStep = step;
+    double localStep = fractionOfTheDifferenceInAngles;
 
     bool needReduce = false;
 
@@ -65,7 +72,7 @@ State RRT::steer(const State &q_rand, const State &q_near)
         double delta = normalizeAngle(q_rand.angleVector(i) - q_near.angleVector(i));
         double a = q_near.angleVector(i) + delta * localStep;
 
-        if (std::fabs(a) > treashold)
+        if (std::fabs(a) > treasholdOneStepDegree)
         {
             needReduce = true;
         }
@@ -83,7 +90,7 @@ State RRT::steer(const State &q_rand, const State &q_near)
                 double delta = normalizeAngle(q_rand.angleVector(i) - q_near.angleVector(i));
                 double a = q_near.angleVector(i) + delta * localStep;
 
-                if (std::fabs(a) > treashold)
+                if (std::fabs(a) > treasholdToTheGoalDegree)
                     ok = false;
             }
 
@@ -105,21 +112,28 @@ State RRT::steer(const State &q_rand, const State &q_near)
 
 void RRT::generateStatesBtw(const State &q_new, const State &q_near, std::vector<State> &out)
 {
-    out.reserve(stepBtw + 1);
+    out.reserve(onHowManyStepsDevideAngleDistanceBtw2States + 1);
 
-    for (size_t t = 0; t <= stepBtw; t++)
+    for (size_t t = 0; t <= onHowManyStepsDevideAngleDistanceBtw2States; t++)
     {
         std::vector<double> angles(4);
-        double alpha = double(t) / double(stepBtw);
+        double alpha = double(t) / double(onHowManyStepsDevideAngleDistanceBtw2States);
 
         for (int i = 0; i < q_new.joints; i++)
         {
             double delta = normalizeAngle(q_new.angleVector(i) - q_near.angleVector(i));
-            angles[i] = q_near.angleVector(i) + delta * alpha;
+            angles[i] = normalizeAngle(q_near.angleVector(i) + delta * alpha);
         }
 
         out.emplace_back(angles);
     }
+}
+
+std::vector<State> RRT::getStatesBtw(const State &q_new, const State &q_near)
+{
+    std::vector<State> vec;
+    generateStatesBtw(q_new, q_near, vec);
+    return vec;
 }
 
 bool RRT::checkStatesBtw(const State &q_new, const State &q_near)
@@ -129,7 +143,7 @@ bool RRT::checkStatesBtw(const State &q_new, const State &q_near)
 
     for (const auto &s : vec)
     {
-        if (env.checkCollision(s, 0.05))
+        if (env.checkCollision(s, 0.0))
             return false;
     }
     return true;
@@ -137,5 +151,23 @@ bool RRT::checkStatesBtw(const State &q_new, const State &q_near)
 
 bool RRT::checkGoalTreashold(const State &q_new, const State &q_goal)
 {
-    return tree.distanceFunction(q_new, q_goal) <= treashold;
+    std::cout << tree.weightedDistance(q_new, q_goal) << "\n";
+    return tree.weightedDistance(q_new, q_goal) <= treasholdToTheGoalDegree;
+}
+
+std::vector<State> RRT::getPlan()
+{
+    std::vector<State> plan;
+    if (!nodeGOAL)
+        return plan;
+
+    std::shared_ptr<Node> cur = nodeGOAL;
+    while (cur)
+    {
+        plan.push_back(cur->value);
+        cur = cur->parentPtr;
+    }
+
+    std::reverse(plan.begin(), plan.end());
+    return plan;
 }
