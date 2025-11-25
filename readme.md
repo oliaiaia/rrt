@@ -20,12 +20,12 @@ This project implements a motion planning solution for a 4R manipulator (4 revol
 
 ## Features
 
-- 🚀 **High-performance C++ core** with Python bindings
-- 🎯 **RRT algorithm** for path planning in continuous space
-- 🛡️ **Collision detection** between manipulator links and obstacles
-- 📊 **Multiple distance metrics** with configurable weights
-- 🎨 **Visualization tools** for states and trajectories
-- ⚡ **Optimized** using Eigen library for linear algebra
+- **High-performance C++ core** with Python bindings
+- **RRT algorithm** for path planning in continuous space
+- **Collision detection** between manipulator links and obstacles
+- **Multiple distance metrics** with configurable weights
+- **Visualization tools** for states and trajectories
+- **Optimized** using Eigen library for linear algebra
 
 ## Installation & Compilation
 
@@ -64,19 +64,19 @@ make
 
 | Step Size | Performance | Solution Quality |
 |-----------|-------------|------------------|
-| **10°** | Balanced | ✅ Good |
-| **5°** | Slower | 🎯 Precise |
-| **25°** | Faster | ⚠️ Coarse |
+| **10°** | Balanced | Good |
+| **5°** | Slower | Precise |
+| **25°** | Faster | Coarse |
 
 ### Visualization Examples
 
-![10 Degrees Step](solve_4R.gif)
+![10 Degrees Step](data/solve_4R.gif)
 *RRT with 10° step limit - Balanced performance*
 
-![5 Degrees Step](solve_4R_5.gif)
+![5 Degrees Step](data/solve_4R_5.gif)
 *RRT with 5° step limit - Higher precision*
 
-![25 Degrees Step](solve_4R_25.gif)
+![25 Degrees Step](data/solve_4R_25.gif)
 *RRT with 25° step limit - Faster exploration*
 
 ## Project Structure
@@ -92,7 +92,7 @@ make
 │   ├── Tree.cpp         # Tree operations
 │   ├── bindings.cpp     # Python bindings
 │   └── test.cpp         # C++ tests
-├── main.ipynb           # Main Python notebook
+├── olgatiupina_ps2.ipynb# Main Python notebook
 ├── environment.py       # Base Python classes for data
 └── data.pickle          # Problem data
 ```
