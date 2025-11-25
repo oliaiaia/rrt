@@ -39,6 +39,7 @@ public:
     }
     
     bool launch(State stateSTART, State stateGOAL);
+    bool checkStatesBtw(const State &stateNEW, const State &stateNEAR);
 
     std::vector<State> getPlan();
     State sample();
@@ -55,11 +56,10 @@ private:
     double onHowManyStepsDevideAngleDistanceBtw2States = 10; //steps between two states to check obstacles between them
     double treasholdToTheGoalDegree = 10; //dist to goal 
     double treasholdOneStepDegree = 10; 
-    double goalBiasProbability = 0.0;
+    double goalBiasProbability = 0.05;
 
     State steer(const State &stateRANDOM, const State &stateNEAR);
     void generateStatesBtw(const State &stateNEW, const State &stateNEAR, std::vector<State> &statesVector);
     bool checkGoalTreashold(const State &stateNEW, const State &stateGOAL);
-    bool checkStatesBtw(const State &stateNEW, const State &stateNEAR);
 
 };

@@ -62,7 +62,6 @@ std::shared_ptr<Node> Tree::findNearestRecursiveHelper(const std::shared_ptr<Nod
     return bestNode;
 }
 
-// BFS
 std::shared_ptr<Node> Tree::findNearestBFS(const State &target)
 {
     if (!root)

@@ -111,22 +111,17 @@ struct Environment
                 Eigen::Vector2d p1 = s.jointsMatrix.row(i);
                 Eigen::Vector2d p2 = s.jointsMatrix.row(i + 1);
 
-                // Проверяем, находится ли начало или конец отрезка внутри препятствия
                 if ((p0 - p1).norm() <= r || (p0 - p2).norm() <= r)
                     return true;
 
-                // Проверяем расстояние от препятствия до отрезка
                 Eigen::Vector2d line = p2 - p1;
                 double L2 = line.squaredNorm();
 
-                // Если отрезок вырожден (точка)
                 if (L2 < std::numeric_limits<double>::epsilon())
                     continue;
 
-                // Находим проекцию точки на прямую, содержащую отрезок
                 double t = (p0 - p1).dot(line) / L2;
 
-                // Если проекция выходит за пределы отрезка, проверяем ближайшую конечную точку
                 if (t < 0.0)
                 {
                     if ((p0 - p1).norm() <= r)
@@ -139,7 +134,6 @@ struct Environment
                 }
                 else
                 {
-                    // Проекция находится на отрезке, проверяем расстояние до нее
                     Eigen::Vector2d projection = p1 + t * line;
                     if ((p0 - projection).norm() <= r)
                         return true;

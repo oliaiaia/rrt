@@ -64,8 +64,6 @@ public:
         env = Environment(obstaclesVector);
     }
 
-
-
     void setIntermediateSteps(double onHowManyStepsDevideAngleDistanceBtw2States) {
         rrt.setOnHowManyStepsDevideAngleDistanceBtw2States(onHowManyStepsDevideAngleDistanceBtw2States);
     }
@@ -125,7 +123,7 @@ public:
     py::list generateStatesBtw2States(const py::list &state1PY, const py::list &state2PY)
     {
         py::list fullPlan;
-        
+
         State state1S = py_list_to_vector1d_double(state1PY);
         State state2S = py_list_to_vector1d_double(state2PY);
         std::vector<State> stateBTW = rrt.getStatesBtw(state1S, state2S);
@@ -135,6 +133,13 @@ public:
             fullPlan.append(aglesFromTheStep);
         }
         return fullPlan;
+    }
+
+    bool checkStatesBtw2States(const py::list &state1PY, const py::list &state2PY)
+    {
+        State state1S = py_list_to_vector1d_double(state1PY);
+        State state2S = py_list_to_vector1d_double(state2PY);
+        return rrt.checkStatesBtw(state1S, state2S);
     }
 
     bool checkCollisioin(const py::list& stateAngle) {
@@ -227,6 +232,16 @@ PYBIND11_MODULE(rtt_planning_lib, m)
              "    state2: second state as list of angles\n"
              "Returns:\n"
              "    list: list of intermediate states")
+            
+        .def("check_states_btw", &PyRRT::checkStatesBtw2States,
+             py::arg("state1"),
+             py::arg("state2"),
+             "Generate intermediate states between two states\n"
+             "Args:\n"
+             "    state1: first state as list of angles\n"
+             "    state2: second state as list of angles\n"
+             "Returns:\n"
+             "    bool: is collision")
 
         .def("check_collision", &PyRRT::checkCollisioin,
              py::arg("state_angles"),
