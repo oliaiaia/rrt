@@ -1,5 +1,5 @@
 {
-    "cmake.sourceDirectory": "/home/olia/Skoltech/Planning/PS2-sampling/rrt",
+    "cmake.sourceDirectory": "/home/olia/Skoltech/Planning/olgatiupina_ps2/rrt",
     "files.associations": {
         "deque": "cpp",
         "forward_list": "cpp",

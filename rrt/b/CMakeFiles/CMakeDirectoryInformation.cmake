@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/home/olia/Skoltech/Planning/olgatiupina_ps2/rrt")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/olia/Skoltech/Planning/olgatiupina_ps2/build")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/b")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

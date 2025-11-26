@@ -17,10 +17,6 @@ double Tree::weightedDistance(const State &q1, const State &q2) const
     return distance;
 }
 
-std::shared_ptr<Node> Tree::findNearestRecursive(const State &target)
-{
-    return findNearestRecursiveHelper(root, target, root, std::numeric_limits<double>::max());
-}
 
 std::shared_ptr<Node> Tree::findNearest(const State &target)
 {
@@ -36,30 +32,6 @@ std::shared_ptr<Node> Tree::addNode(std::shared_ptr<Node> parent, const State &s
         parent->children.push_back(newNode);
     }
     return newNode;
-}
-
-std::shared_ptr<Node> Tree::findNearestRecursiveHelper(const std::shared_ptr<Node> &current,
-                                                       const State &target,
-                                                       std::shared_ptr<Node> bestNode,
-                                                       double bestDistance)
-{
-    if (!current)
-        return bestNode;
-
-    double currentDistance = weightedDistance(current->value, target);
-    if (currentDistance < bestDistance)
-    {
-        bestDistance = currentDistance;
-        bestNode = current;
-    }
-
-    for (const auto &child : current->children)
-    {
-        bestNode = findNearestRecursiveHelper(child, target, bestNode, bestDistance);
-        bestDistance = weightedDistance(bestNode->value, target);
-    }
-
-    return bestNode;
 }
 
 std::shared_ptr<Node> Tree::findNearestBFS(const State &target)

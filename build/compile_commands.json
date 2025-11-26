@@ -1,38 +1,38 @@
 [
 {
-  "directory": "/home/olia/Skoltech/Planning/PS2-sampling/build",
-  "command": "/usr/bin/c++  -I/home/olia/Skoltech/Planning/PS2-sampling/rrt/include -isystem /usr/include/eigen3  -O3 -march=native -DNDEBUG -g -std=c++17 -o CMakeFiles/rtt_planning.dir/src/Tree.cpp.o -c /home/olia/Skoltech/Planning/PS2-sampling/rrt/src/Tree.cpp",
-  "file": "/home/olia/Skoltech/Planning/PS2-sampling/rrt/src/Tree.cpp",
+  "directory": "/home/olia/Skoltech/Planning/olgatiupina_ps2/build",
+  "command": "/usr/bin/c++  -I/home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/include -isystem /usr/include/eigen3  -O3 -march=native -DNDEBUG -g -std=c++17 -o CMakeFiles/rtt_planning.dir/src/Tree.cpp.o -c /home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/src/Tree.cpp",
+  "file": "/home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/src/Tree.cpp",
   "output": "CMakeFiles/rtt_planning.dir/src/Tree.cpp.o"
 },
 {
-  "directory": "/home/olia/Skoltech/Planning/PS2-sampling/build",
-  "command": "/usr/bin/c++  -I/home/olia/Skoltech/Planning/PS2-sampling/rrt/include -isystem /usr/include/eigen3  -O3 -march=native -DNDEBUG -g -std=c++17 -o CMakeFiles/rtt_planning.dir/src/RRT.cpp.o -c /home/olia/Skoltech/Planning/PS2-sampling/rrt/src/RRT.cpp",
-  "file": "/home/olia/Skoltech/Planning/PS2-sampling/rrt/src/RRT.cpp",
+  "directory": "/home/olia/Skoltech/Planning/olgatiupina_ps2/build",
+  "command": "/usr/bin/c++  -I/home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/include -isystem /usr/include/eigen3  -O3 -march=native -DNDEBUG -g -std=c++17 -o CMakeFiles/rtt_planning.dir/src/RRT.cpp.o -c /home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/src/RRT.cpp",
+  "file": "/home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/src/RRT.cpp",
   "output": "CMakeFiles/rtt_planning.dir/src/RRT.cpp.o"
 },
 {
-  "directory": "/home/olia/Skoltech/Planning/PS2-sampling/build",
-  "command": "/usr/bin/c++  -I/home/olia/Skoltech/Planning/PS2-sampling/rrt/include -isystem /usr/include/eigen3  -O3 -march=native -DNDEBUG -g -std=c++17 -o CMakeFiles/rtt_planning.dir/src/test.cpp.o -c /home/olia/Skoltech/Planning/PS2-sampling/rrt/src/test.cpp",
-  "file": "/home/olia/Skoltech/Planning/PS2-sampling/rrt/src/test.cpp",
+  "directory": "/home/olia/Skoltech/Planning/olgatiupina_ps2/build",
+  "command": "/usr/bin/c++  -I/home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/include -isystem /usr/include/eigen3  -O3 -march=native -DNDEBUG -g -std=c++17 -o CMakeFiles/rtt_planning.dir/src/test.cpp.o -c /home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/src/test.cpp",
+  "file": "/home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/src/test.cpp",
   "output": "CMakeFiles/rtt_planning.dir/src/test.cpp.o"
 },
 {
-  "directory": "/home/olia/Skoltech/Planning/PS2-sampling/build",
-  "command": "/usr/bin/c++ -Drtt_planning_lib_EXPORTS -I/home/olia/Skoltech/Planning/PS2-sampling/rrt/include -isystem /usr/include/python3.12 -isystem /usr/include/eigen3  -O3 -march=native -DNDEBUG -g -std=c++17 -fPIC -fvisibility=hidden -O3 -march=native -DNDEBUG -o CMakeFiles/rtt_planning_lib.dir/src/Tree.cpp.o -c /home/olia/Skoltech/Planning/PS2-sampling/rrt/src/Tree.cpp",
-  "file": "/home/olia/Skoltech/Planning/PS2-sampling/rrt/src/Tree.cpp",
+  "directory": "/home/olia/Skoltech/Planning/olgatiupina_ps2/build",
+  "command": "/usr/bin/c++ -Drtt_planning_lib_EXPORTS -I/home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/include -isystem /usr/include/python3.12 -isystem /usr/include/eigen3  -O3 -march=native -DNDEBUG -g -std=c++17 -fPIC -fvisibility=hidden -O3 -march=native -DNDEBUG -o CMakeFiles/rtt_planning_lib.dir/src/Tree.cpp.o -c /home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/src/Tree.cpp",
+  "file": "/home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/src/Tree.cpp",
   "output": "CMakeFiles/rtt_planning_lib.dir/src/Tree.cpp.o"
 },
 {
-  "directory": "/home/olia/Skoltech/Planning/PS2-sampling/build",
-  "command": "/usr/bin/c++ -Drtt_planning_lib_EXPORTS -I/home/olia/Skoltech/Planning/PS2-sampling/rrt/include -isystem /usr/include/python3.12 -isystem /usr/include/eigen3  -O3 -march=native -DNDEBUG -g -std=c++17 -fPIC -fvisibility=hidden -O3 -march=native -DNDEBUG -o CMakeFiles/rtt_planning_lib.dir/src/RRT.cpp.o -c /home/olia/Skoltech/Planning/PS2-sampling/rrt/src/RRT.cpp",
-  "file": "/home/olia/Skoltech/Planning/PS2-sampling/rrt/src/RRT.cpp",
+  "directory": "/home/olia/Skoltech/Planning/olgatiupina_ps2/build",
+  "command": "/usr/bin/c++ -Drtt_planning_lib_EXPORTS -I/home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/include -isystem /usr/include/python3.12 -isystem /usr/include/eigen3  -O3 -march=native -DNDEBUG -g -std=c++17 -fPIC -fvisibility=hidden -O3 -march=native -DNDEBUG -o CMakeFiles/rtt_planning_lib.dir/src/RRT.cpp.o -c /home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/src/RRT.cpp",
+  "file": "/home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/src/RRT.cpp",
   "output": "CMakeFiles/rtt_planning_lib.dir/src/RRT.cpp.o"
 },
 {
-  "directory": "/home/olia/Skoltech/Planning/PS2-sampling/build",
-  "command": "/usr/bin/c++ -Drtt_planning_lib_EXPORTS -I/home/olia/Skoltech/Planning/PS2-sampling/rrt/include -isystem /usr/include/python3.12 -isystem /usr/include/eigen3  -O3 -march=native -DNDEBUG -g -std=c++17 -fPIC -fvisibility=hidden -O3 -march=native -DNDEBUG -o CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o -c /home/olia/Skoltech/Planning/PS2-sampling/rrt/src/bindings.cpp",
-  "file": "/home/olia/Skoltech/Planning/PS2-sampling/rrt/src/bindings.cpp",
+  "directory": "/home/olia/Skoltech/Planning/olgatiupina_ps2/build",
+  "command": "/usr/bin/c++ -Drtt_planning_lib_EXPORTS -I/home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/include -isystem /usr/include/python3.12 -isystem /usr/include/eigen3  -O3 -march=native -DNDEBUG -g -std=c++17 -fPIC -fvisibility=hidden -O3 -march=native -DNDEBUG -o CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o -c /home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/src/bindings.cpp",
+  "file": "/home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/src/bindings.cpp",
   "output": "CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o"
 }
 ]

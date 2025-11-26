@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/include -isystem /usr/include/eigen3
 
-CXX_FLAGS =  -O3 -march=native -DNDEBUG -g -std=c++17
+CXX_FLAGS =  -O3 -march=native -DNDEBUG -std=c++17
 

@@ -6,5 +6,5 @@ CXX_DEFINES = -Drtt_planning_lib_EXPORTS
 
 CXX_INCLUDES = -I/home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/include -isystem /usr/include/python3.12 -isystem /usr/include/eigen3
 
-CXX_FLAGS =  -O3 -march=native -DNDEBUG -g -std=c++17 -fPIC -fvisibility=hidden -O3 -march=native -DNDEBUG
+CXX_FLAGS =  -O3 -march=native -DNDEBUG -std=c++17 -fPIC -fvisibility=hidden -O3 -march=native -DNDEBUG -flto -fno-fat-lto-objects
 

@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/olia/Skoltech/Planning/olgatiupina_ps2/rrt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/olia/Skoltech/Planning/olgatiupina_ps2/build
+CMAKE_BINARY_DIR = /home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/b
 
 # Include any dependencies generated for this target.
 include CMakeFiles/rtt_planning_lib.dir/depend.make
@@ -72,7 +72,7 @@ include CMakeFiles/rtt_planning_lib.dir/flags.make
 CMakeFiles/rtt_planning_lib.dir/src/Tree.cpp.o: CMakeFiles/rtt_planning_lib.dir/flags.make
 CMakeFiles/rtt_planning_lib.dir/src/Tree.cpp.o: /home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/src/Tree.cpp
 CMakeFiles/rtt_planning_lib.dir/src/Tree.cpp.o: CMakeFiles/rtt_planning_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olia/Skoltech/Planning/olgatiupina_ps2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/rtt_planning_lib.dir/src/Tree.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/rtt_planning_lib.dir/src/Tree.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rtt_planning_lib.dir/src/Tree.cpp.o -MF CMakeFiles/rtt_planning_lib.dir/src/Tree.cpp.o.d -o CMakeFiles/rtt_planning_lib.dir/src/Tree.cpp.o -c /home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/src/Tree.cpp
 
 CMakeFiles/rtt_planning_lib.dir/src/Tree.cpp.i: cmake_force
@@ -86,7 +86,7 @@ CMakeFiles/rtt_planning_lib.dir/src/Tree.cpp.s: cmake_force
 CMakeFiles/rtt_planning_lib.dir/src/RRT.cpp.o: CMakeFiles/rtt_planning_lib.dir/flags.make
 CMakeFiles/rtt_planning_lib.dir/src/RRT.cpp.o: /home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/src/RRT.cpp
 CMakeFiles/rtt_planning_lib.dir/src/RRT.cpp.o: CMakeFiles/rtt_planning_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olia/Skoltech/Planning/olgatiupina_ps2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/rtt_planning_lib.dir/src/RRT.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/rtt_planning_lib.dir/src/RRT.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rtt_planning_lib.dir/src/RRT.cpp.o -MF CMakeFiles/rtt_planning_lib.dir/src/RRT.cpp.o.d -o CMakeFiles/rtt_planning_lib.dir/src/RRT.cpp.o -c /home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/src/RRT.cpp
 
 CMakeFiles/rtt_planning_lib.dir/src/RRT.cpp.i: cmake_force
@@ -100,7 +100,7 @@ CMakeFiles/rtt_planning_lib.dir/src/RRT.cpp.s: cmake_force
 CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: CMakeFiles/rtt_planning_lib.dir/flags.make
 CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: /home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/src/bindings.cpp
 CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o: CMakeFiles/rtt_planning_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olia/Skoltech/Planning/olgatiupina_ps2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o -MF CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o.d -o CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o -c /home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/src/bindings.cpp
 
 CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.i: cmake_force
@@ -125,8 +125,9 @@ rtt_planning_lib.cpython-312-x86_64-linux-gnu.so: CMakeFiles/rtt_planning_lib.di
 rtt_planning_lib.cpython-312-x86_64-linux-gnu.so: CMakeFiles/rtt_planning_lib.dir/src/bindings.cpp.o
 rtt_planning_lib.cpython-312-x86_64-linux-gnu.so: CMakeFiles/rtt_planning_lib.dir/build.make
 rtt_planning_lib.cpython-312-x86_64-linux-gnu.so: CMakeFiles/rtt_planning_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/olia/Skoltech/Planning/olgatiupina_ps2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared module rtt_planning_lib.cpython-312-x86_64-linux-gnu.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/b/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared module rtt_planning_lib.cpython-312-x86_64-linux-gnu.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rtt_planning_lib.dir/link.txt --verbose=$(VERBOSE)
+	/usr/bin/strip /home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/b/rtt_planning_lib.cpython-312-x86_64-linux-gnu.so
 
 # Rule to build all files generated by this target.
 CMakeFiles/rtt_planning_lib.dir/build: rtt_planning_lib.cpython-312-x86_64-linux-gnu.so
@@ -137,6 +138,6 @@ CMakeFiles/rtt_planning_lib.dir/clean:
 .PHONY : CMakeFiles/rtt_planning_lib.dir/clean
 
 CMakeFiles/rtt_planning_lib.dir/depend:
-	cd /home/olia/Skoltech/Planning/olgatiupina_ps2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/olia/Skoltech/Planning/olgatiupina_ps2/rrt /home/olia/Skoltech/Planning/olgatiupina_ps2/rrt /home/olia/Skoltech/Planning/olgatiupina_ps2/build /home/olia/Skoltech/Planning/olgatiupina_ps2/build /home/olia/Skoltech/Planning/olgatiupina_ps2/build/CMakeFiles/rtt_planning_lib.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/b && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/olia/Skoltech/Planning/olgatiupina_ps2/rrt /home/olia/Skoltech/Planning/olgatiupina_ps2/rrt /home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/b /home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/b /home/olia/Skoltech/Planning/olgatiupina_ps2/rrt/b/CMakeFiles/rtt_planning_lib.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/rtt_planning_lib.dir/depend
 

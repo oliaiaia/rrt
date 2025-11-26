@@ -46,8 +46,6 @@ public:
 
     double weightedDistance(const State &q1, const State &q2) const;
 
-    std::shared_ptr<Node> findNearestRecursive(const State &target);
-
     std::shared_ptr<Node> findNearest(const State &target);
 
     std::shared_ptr<Node> addNode(std::shared_ptr<Node> parent, const State &state);
@@ -56,11 +54,6 @@ public:
     {
         return root;
     }
-    std::shared_ptr<Node> findNearestRecursiveHelper(const std::shared_ptr<Node> &current,
-                                                     const State &target,
-                                                     std::shared_ptr<Node> bestNode,
-                                                     double bestDistance);
 
-    // BFS
     std::shared_ptr<Node> findNearestBFS(const State &target);
 };
