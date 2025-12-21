@@ -1,4 +1,0 @@
-/home/olia/Skoltech/Planning/olgatiupina_ps2/build/CMakeFiles/rtt_planning.dir
-/home/olia/Skoltech/Planning/olgatiupina_ps2/build/CMakeFiles/rtt_planning_lib.dir
-/home/olia/Skoltech/Planning/olgatiupina_ps2/build/CMakeFiles/edit_cache.dir
-/home/olia/Skoltech/Planning/olgatiupina_ps2/build/CMakeFiles/rebuild_cache.dir
