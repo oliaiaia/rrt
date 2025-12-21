@@ -70,13 +70,13 @@ make
 
 ### Visualization Examples
 
-![10 Degrees Step](solve_4R.gif)
+![10 Degrees Step](data/solve_4R.gif)
 *RRT with 10° step limit - Balanced performance*
 
-![5 Degrees Step](solve_4R_5.gif)
+![5 Degrees Step](data/solve_4R_5.gif)
 *RRT with 5° step limit - Higher precision*
 
-![25 Degrees Step](solve_4R_25.gif)
+![25 Degrees Step](data/solve_4R_25.gif)
 *RRT with 25° step limit - Faster exploration*
 
 ## Project Structure
