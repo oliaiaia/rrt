@@ -5,7 +5,7 @@ double Tree::weightedDistance(const State &q1, const State &q2) const
 {
     double distance = 0.0;
 
-    for (int i = 0; i < 4; ++i)
+    for (int i = 0; i < q1.joints; ++i)
     {
         double diff = std::abs(q1.angleVector(i) - q2.angleVector(i));
         if (diff > 180.0) {

@@ -15,76 +15,67 @@ struct Obstacle
     double y = 0.0;
     double R = 0.0;
 };
-
 struct State
 {
-    Eigen::Vector4d angleVector; // degrees
-    Eigen::Matrix<double, 5, 2> jointsMatrix;
     int joints = 4;
+
+    Eigen::VectorXd angleVector; // degrees
+    Eigen::Matrix<double, Eigen::Dynamic, 2> jointsMatrix;
 
     State() = default;
 
     State(const std::vector<double> &angles)
     {
-        joints = 4;
+        joints = angles.size();
+
+        angleVector.resize(joints);
         angleVector.setZero();
-        jointsMatrix.setZero();
         fillAngles(angles);
-        jointsMatrix = calculateJointsByAngles(angles);
+
+        jointsMatrix = calculateJointsByAngles(angles, joints);
     }
 
     void fillAngles(const std::vector<double> &angles)
     {
-        for (int t = 0; t < (int)angles.size() && t < 4; ++t)
-            angleVector(t) = angles[t];
+        for (int i = 0; i < joints; ++i)
+            angleVector(i) = angles[i];
     }
 
     static Eigen::Matrix3d formSE2(double x, double y, double angleDeg)
     {
-        double angleRad = angleDeg * M_PI / 180.0;
+        double a = angleDeg * M_PI / 180.0;
 
         Eigen::Matrix3d T;
-        T << std::cos(angleRad), -std::sin(angleRad), x,
-            std::sin(angleRad), std::cos(angleRad), y,
-            0.0, 0.0, 1.0;
+        T << std::cos(a), -std::sin(a), x,
+             std::sin(a),  std::cos(a), y,
+             0.0,          0.0,         1.0;
         return T;
     }
 
-    static Eigen::Matrix<double, 5, 2> calculateJointsByAngles(
-        const std::vector<double> &angles,
-        double jointLength = 1.0)
+    static Eigen::Matrix<double, Eigen::Dynamic, 2>
+    calculateJointsByAngles(const std::vector<double> &angles,
+                            int joints,
+                            double jointLength = 1.0)
     {
-        Eigen::Matrix<double, 5, 2> seg;
+        Eigen::Matrix<double, Eigen::Dynamic, 2> seg(joints + 1, 2);
         seg.setZero();
 
-        // initial pos (0, 0)
-        seg(0, 0) = 0.0;
-        seg(0, 1) = 0.0;
-
-        Eigen::Matrix3d T1 = formSE2(0, 0, angles[0]);
-        Eigen::Matrix3d T2 = formSE2(jointLength, 0, angles[1]);
-        Eigen::Matrix3d T3 = formSE2(jointLength, 0, angles[2]);
-        Eigen::Matrix3d T4 = formSE2(jointLength, 0, angles[3]);
-        Eigen::Matrix3d T5 = formSE2(jointLength, 0, 0);
-
-        
+        Eigen::Matrix3d T = Eigen::Matrix3d::Identity();
         Eigen::Vector3d p0(0, 0, 1);
 
-        Eigen::Vector3d p = T1 * T2 * p0;
-        seg(1, 0) = p(0);
-        seg(1, 1) = p(1);
+        seg.row(0) << 0.0, 0.0;
 
-        p = T1 * T2 * T3 * p0;
-        seg(2, 0) = p(0);
-        seg(2, 1) = p(1);
+        for (int i = 0; i < joints; ++i)
+        {
+            Eigen::Matrix3d R  = formSE2(0, 0, angles[i]);
+            Eigen::Matrix3d Tr = formSE2(jointLength, 0, 0);
 
-        p = T1 * T2 * T3 * T4 * p0;
-        seg(3, 0) = p(0);
-        seg(3, 1) = p(1);
+            T = T * R * Tr;
 
-        p = T1 * T2 * T3 * T4 * T5 * p0;
-        seg(4, 0) = p(0);
-        seg(4, 1) = p(1);
+            Eigen::Vector3d p = T * p0;
+            seg(i + 1, 0) = p(0);
+            seg(i + 1, 1) = p(1);
+        }
 
         return seg;
     }

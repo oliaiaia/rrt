@@ -86,7 +86,7 @@ bool RRT::launch(State stateSTART, State stateGOAL)
 
 State RRT::steer(const State &q_rand, const State &q_near)
 {
-    std::vector<double> angles(4);
+    std::vector<double> angles(q_rand.joints);
     for(size_t t = 0; t < angles.size(); t++) 
         angles[t] = q_rand.angleVector(t);
 
@@ -127,7 +127,7 @@ void RRT::generateStatesBtw(const State &q_new, const State &q_near, std::vector
 
     for (size_t t = 0; t <= onHowManyStepsDevideAngleDistanceBtw2States; t++)
     {
-        std::vector<double> angles(4);
+        std::vector<double> angles(q_new.joints);
         double alpha = double(t) / double(onHowManyStepsDevideAngleDistanceBtw2States);
 
         for (int i = 0; i < q_new.joints; i++)
