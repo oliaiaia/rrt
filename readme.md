@@ -1,17 +1,17 @@
-# RRT Path Planning for 4-Link Manipulator
+# RRT Path Planning for N-Link Manipulator
 
-A C++ implementation of Rapidly-exploring Random Trees (RRT) algorithm for path planning of a 4-link robotic manipulator in continuous 2D space with obstacle avoidance.
+A C++ implementation of Rapidly-exploring Random Trees (RRT) algorithm for path planning of a N-link robotic manipulator in continuous 2D space with obstacle avoidance.
 
 ## Overview
 
-This project implements a motion planning solution for a 4R manipulator (4 revolute joints) operating in a 2D workspace with circular obstacles. The algorithm efficiently finds collision-free paths from start to goal configurations using the RRT approach.
+This project implements a motion planning solution for a 4R manipulator (N revolute joints) operating in a 2D workspace with circular obstacles. The algorithm efficiently finds collision-free paths from start to goal configurations using the RRT approach.
 
 ## Problem Description
 
 ### Workspace
 - **Domain**: Continuous 2D area W = ℝ × ℝ
 - **Obstacles**: 6 circular obstacles defined by [x, y, radius]
-- **Manipulator**: 4-link mechanism with root joint at (0, 0)
+- **Manipulator**: N-link mechanism with root joint at (0, 0)
 
 ### Configuration Space
 - **State Representation**: q = [θ₁, θ₂, θ₃, θ₄]
